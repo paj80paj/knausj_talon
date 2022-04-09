@@ -1,4 +1,4 @@
-date insert:
+f555date insert:
     insert(user.time_format("%Y-%m-%d"))
 date insert UTC:
     insert(user.time_format_utc("%Y-%m-%d"))
