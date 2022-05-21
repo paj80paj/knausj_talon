@@ -52,12 +52,12 @@ class UserActions:
         """Shows the properties for the file"""
         actions.key("cmd-i")
 
-    def file_manager_open_directory(path: str):
-        """opens the directory that's already visible in the view"""
-        actions.key("cmd-shift-g")
-        actions.sleep("50ms")
-        actions.insert(path)
-        actions.key("enter")
+    # def file_manager_open_directory(path: str):
+    #     """opens the directory that's already visible in the view"""
+    #     actions.key("cmd-shift-g")
+    #     actions.sleep("50ms")
+    #     actions.insert(path)
+    #     actions.key("enter")
 
     def file_manager_select_directory(path: str):
         """selects the directory"""
@@ -78,3 +78,21 @@ class UserActions:
         """selects the file"""
         actions.key("home")
         actions.insert(path)
+
+    def file_manager_open_directory(path: str):
+            """opens the directory that's already visible in the view"""
+            escaped_path = path.replace(r'"', r'\"')
+            applescript.run(f"""
+                set _folder to POSIX file "{escaped_path}"
+                tell application id "com.apple.finder"
+                    try
+                        with timeout of 0.1 seconds
+                            if (front Finder window's target exists) and (front Finder window's sidebar width > 0) then
+                                set front Finder window's target to _folder
+                                return
+                            end if
+                        end timeout
+                    end try
+                    open _folder
+                end tell
+            """)
