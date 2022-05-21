@@ -106,6 +106,7 @@ def close_editor(submit_draft: bool):
     remove_tag("user.draft_editor_active")
     actions.edit.select_all()
     selected_text = actions.edit.selected_text()
+    actions.user.copy(selected_text)
     actions.edit.delete()
     actions.app.tab_close()
     actions.user.switcher_focus_window(original_window)
