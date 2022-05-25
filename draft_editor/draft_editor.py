@@ -110,6 +110,6 @@ def close_editor(submit_draft: bool):
     actions.edit.delete()
     actions.app.tab_close()
     actions.user.switcher_focus_window(original_window)
-    actions.sleep("200ms")
+    actions.sleep("300ms")
     if submit_draft:
         actions.user.paste(selected_text)
