@@ -79,6 +79,7 @@ class Actions:
         # Wait additional time for talon context to update.
         actions.sleep("200ms")
         actions.app.tab_open()
+        actions.sleep("200ms")
         if selected_text != "":
             actions.user.paste(selected_text)
         add_tag("user.draft_editor_active")
@@ -108,8 +109,8 @@ def close_editor(submit_draft: bool):
     selected_text = actions.edit.selected_text()
     actions.user.copy(selected_text)
     actions.edit.delete()
-    actions.app.tab_close()
+    # actions.app.tab_close()
     actions.user.switcher_focus_window(original_window)
-    actions.sleep("300ms")
+    actions.sleep("400ms")
     if submit_draft:
         actions.user.paste(selected_text)
