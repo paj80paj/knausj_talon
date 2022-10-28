@@ -1,7 +1,7 @@
 tag: user.find_and_replace
 -
-hunt this: user.find("")
-hunt this <user.text>: user.find(text)
+hunt here: user.find("")
+hunt here <user.text>: user.find(text)
 hunt all: user.find_everywhere("")
 hunt all <user.text>: user.find_everywhere(text)
 hunt case : user.find_toggle_match_by_case()

@@ -1,26 +1,26 @@
 .(.(tag: user.markdown
 -
-level one:
+level first:
     edit.line_start()
     edit.line_start()
     "# "
-level two:
+level second:
     edit.line_start()
     edit.line_start()
     "## "
-level three: 
+level third: 
     edit.line_start()
     edit.line_start()
     "### "
-level four: 
+level forth: 
     edit.line_start()
     edit.line_start()
     "#### "
-level five: 
+level fifth: 
     edit.line_start()
     edit.line_start()
     "##### "
-level six: 
+level sixth: 
     edit.line_start()
     edit.line_start()
     "###### "
