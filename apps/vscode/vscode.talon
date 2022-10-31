@@ -15,7 +15,9 @@ please [<user.text>]:
     user.vscode("workbench.action.showCommands")
     insert(user.text or "")
 
-# Sidebar
+show editors:
+    user.vscode("workbench.action.showAllEditorsByMostRecentlyUsed")
+    
 bar explore: user.vscode("workbench.view.explorer")
 bar extensions: user.vscode("workbench.view.extensions")
 bar outline: user.vscode("outline.focus")

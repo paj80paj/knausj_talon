@@ -60,3 +60,8 @@ class Actions:
         """Search a search engine for given text"""
         url = search_template.replace("%s", quote_plus(search_text))
         webbrowser.open(url)
+
+    def openDirectory(file: str):
+        "Have Finder open a directory"
+        url = pathlib.Path(file).as_uri()
+        webbrowser.open(url)
