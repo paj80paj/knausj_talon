@@ -98,6 +98,7 @@ indent [more]:
     edit.indent_more()
 
 (indent less | out dent):
+    # how do I say reduce the indent level?
     edit.indent_less()
 
 # deleting
