@@ -7,6 +7,8 @@ tag(): user.multiple_cursors
 tag(): user.snippets
 tag(): user.splits
 tag(): user.tabs
+tag(): user.vscode_notebook
+
 window reload: user.vscode("workbench.action.reloadWindow")
 window close: user.vscode("workbench.action.closeWindow")
 #multiple_cursor.py support end
@@ -244,6 +246,6 @@ skip word: user.vscode("editor.action.moveSelectionToNextFindMatch")
 cell next: user.vscode("jupyter.gotoNextCellInFile")
 cell last: user.vscode("jupyter.gotoPrevCellInFile")
 cell run above: user.vscode("jupyter.runallcellsabove.palette")
-cell run: user.vscode("jupyter.runcurrentcell")
+cell run this: user.vscode("jupyter.runcurrentcell")
 
 install local: user.vscode("workbench.extensions.action.installVSIX")
