@@ -230,6 +230,18 @@ class Actions:
         actions.user.clear_last_phrase()
         actions.user.insert_formatted(last_phrase, formatters)
 
+    def formatters_reformat_paste(formatters: str) -> str:
+        """Reformats the current selection."""
+        text = clip.text()
+        if not text:
+            print("Asked to reformat selection, but nothing selected!")
+            return
+        unformatted = unformat_text(text)
+        
+        text = actions.self.formatted_text(unformatted, formatters)
+        actions.insert(text)
+        return text
+
     def formatters_reformat_selection(formatters: str) -> str:
         """Reformats the current selection."""
         selected = edit.selected_text()
