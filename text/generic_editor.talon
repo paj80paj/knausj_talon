@@ -217,3 +217,7 @@ cut word right:
 cut line:
     edit.select_line()
     edit.cut()
+
+(pace | paste) all:
+  edit.select_all()
+  edit.paste()
