@@ -52,7 +52,7 @@ inside (graves | back ticks):
 	key(left)
 inside angles:
 	insert("<>")
-	key(left)    
+	key(left)
 angle that:
     text = edit.selected_text()
     user.paste("<{text}>")

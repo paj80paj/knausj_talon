@@ -38,7 +38,7 @@ draft all:
 	key('enter')
 	sleep(200ms)
 	insert(text)
-	
+
 draft line:
 	edit.select_line()
 	text = edit.selected_text()

@@ -19,7 +19,7 @@ please [<user.text>]:
 
 show editors:
     user.vscode("workbench.action.showAllEditorsByMostRecentlyUsed")
-    
+
 bar explore: user.vscode("workbench.view.explorer")
 bar extensions: user.vscode("workbench.view.extensions")
 bar outline: user.vscode("outline.focus")

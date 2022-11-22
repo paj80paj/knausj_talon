@@ -8,19 +8,19 @@ level second:
     edit.line_start()
     edit.line_start()
     "## "
-level third: 
+level third:
     edit.line_start()
     edit.line_start()
     "### "
-level forth: 
+level forth:
     edit.line_start()
     edit.line_start()
     "#### "
-level fifth: 
+level fifth:
     edit.line_start()
     edit.line_start()
     "##### "
-level sixth: 
+level sixth:
     edit.line_start()
     edit.line_start()
     "###### "
