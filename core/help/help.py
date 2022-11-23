@@ -2,7 +2,7 @@ import itertools
 import math
 import re
 from collections import defaultdict
-from collections.abc import Iterable
+from typing import Iterable
 from itertools import islice
 
 from talon import Context, Module, actions, imgui, registry
