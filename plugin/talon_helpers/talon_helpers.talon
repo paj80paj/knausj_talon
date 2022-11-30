@@ -16,6 +16,9 @@ talon copy bundle:
 talon copy title:
     title = win.title()
     clip.set_text(title)
+talon copy last:
+    last = user.history_get(1)
+    clip.set_text(last)
 talon dump version:
     result = user.talon_version_info()
     print(result)
