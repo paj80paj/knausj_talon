@@ -9,6 +9,7 @@ class EditActions:
     def selected_text() -> str:
         with clip.capture() as s:
             actions.edit.copy()
+            actions.sleep("150ms")
         try:
             return s.text()
         except clip.NoChange:
