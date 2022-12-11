@@ -70,13 +70,18 @@ class Actions:
         """Open draft editor"""
         global original_window
         original_window = ui.active_window()
+        actions.sleep("400ms")
         editor_app = get_editor_app()
+        actions.sleep("400ms")
         selected_text = actions.edit.selected_text()
+        raise RuntimeError(f"selected_text: {selected_text=}")
+        actions.sleep("400ms")
         actions.user.switcher_focus_app(editor_app)
+        raise RuntimeError(f"xxxxxxxxx {editor_app=}")
         # Wait additional time for talon context to update.
-        actions.sleep("200ms")
+        actions.sleep("400ms")
         actions.app.tab_open()
-        actions.sleep("200ms")
+        actions.sleep("400ms")
         if selected_text != "":
             actions.user.paste(selected_text)
         add_tag("user.draft_editor_active")
