@@ -280,4 +280,8 @@ cell run it: user.vscode("notebook.cell.execute")
 install local: user.vscode("workbench.extensions.action.installVSIX")
 preview markdown: user.vscode("markdown.showPreview")
 
-focus <user.number_string> : key("cmd-{number_string}")
+focus <user.number_string> : 
+    key("cmd-{number_string}")
+
+collapse results:
+    user.vscode("search.action.collapseSearchResults")
