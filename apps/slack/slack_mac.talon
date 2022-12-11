@@ -3,6 +3,9 @@ app: slack
 -
 tag(): user.messaging
 tag(): user.emoji
+
+hunt all: key(cmd-f)
+
 # Workspace
 workspace <number>: key("cmd-{number}")
 # Channel
@@ -44,7 +47,7 @@ bold: key(cmd-b)
 (slack | lack) ([toggle] video): key(v)
 (slack | lack) invite: key(a)
 # Miscellaneous
-(slack | lack) shortcuts: key(cmd-/)
+(slack | lack) show shortcuts: key(cmd-/)
 emote <user.text>: "{text}"
 toggle left sidebar: key(cmd-shift-d)
 toggle right sidebar: key(cmd-.)
