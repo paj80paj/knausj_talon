@@ -14,10 +14,8 @@ righty:
     mouse_click(1)
     # close the mouse grid if open
     # user.grid_close()
-
 mid click:
-    mouse_click(2)27!
-    .
+    mouse_click(2)
     # close the mouse grid
     # user.grid_close()
 
