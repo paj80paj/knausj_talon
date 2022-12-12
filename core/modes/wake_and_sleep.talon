@@ -22,7 +22,7 @@ mode: all
 ^silly$:
     speech.disable()
     user.menu_select('Edit|Start Dictation')
-    actions.sleep('500ms')
+    sleep(500ms)
     speech.enable()
     # key(ctrl-alt-cmd-u)
     #key(ctrl)
