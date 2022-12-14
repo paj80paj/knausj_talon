@@ -74,11 +74,12 @@ class Actions:
         editor_app = get_editor_app()
         actions.sleep("400ms")
         selected_text = actions.edit.selected_text()
-        raise RuntimeError(f"selected_text: {selected_text=}")
+        print(f"********* {selected_text=}")
+        
         actions.sleep("400ms")
         actions.user.switcher_focus_app(editor_app)
-        raise RuntimeError(f"xxxxxxxxx {editor_app=}")
-        # Wait additional time for talon context to update.
+        # raise RuntimeError(f"xxxxxxxxx {editor_app=}")
+        # Wait additiona1l time for talon context to update.
         actions.sleep("400ms")
         actions.app.tab_open()
         actions.sleep("400ms")
@@ -114,8 +115,10 @@ def close_editor(submit_draft: bool):
     global last_draft
     remove_tag("user.draft_editor_active")
     actions.edit.select_all()
+    actions.sleep("400ms")
     selected_text = actions.edit.selected_text()
-    actions.user.copy(selected_text)
+    print(f"********* close {selected_text=}")
+    # actions.user.copy(selected_text)
     actions.edit.delete()
     # actions.app.tab_close()
     actions.user.switcher_focus_window(original_window)
