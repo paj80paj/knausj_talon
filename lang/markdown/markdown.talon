@@ -1,3 +1,4 @@
+
 tag: user.markdown
 -
 level first:
@@ -29,5 +30,11 @@ italic that:
     text = edit.selected_text()
     edit.delete()
     "__{text}__"
- 
-    
+clozify that:
+    text = edit.selected_text()
+    edit.delete()
+    "{{c1::{text}}}" 
+# clozify that <number_small>:
+#     text = edit.selected_text()
+#     edit.delete()
+#     "{{c {number_small} :: {text}}}" 
