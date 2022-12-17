@@ -78,11 +78,20 @@ class Actions:
         
         actions.sleep("400ms")
         actions.user.switcher_focus_app(editor_app)
+        actions.key('ctrl-w')
+        actions.sleep('200ms')
+        actions.insert("dendron")
+        actions.sleep('200ms')
+        actions.key('enter')
         # raise RuntimeError(f"xxxxxxxxx {editor_app=}")
         # Wait additiona1l time for talon context to update.
-        actions.sleep("400ms")
-        actions.app.tab_open()
-        actions.sleep("400ms")
+        actions.sleep("200ms")
+        # actions.app.tab_open()
+        # we want to create a scratch note in Dendron
+        actions.user.vscode("dendron.createScratchNote")
+        actions.sleep("200ms")
+        actions.key('enter')
+        actions.sleep("200ms")
         if selected_text != "":
             actions.user.paste(selected_text)
         add_tag("user.draft_editor_active")
@@ -117,10 +126,12 @@ def close_editor(submit_draft: bool):
     actions.edit.select_all()
     actions.sleep("400ms")
     selected_text = actions.edit.selected_text()
-    print(f"********* close {selected_text=}")
-    # actions.user.copy(selected_text)
+    selected_text = selected_text.split("---")
+    # this will remove the front matter
+    selected_text = selected_text[2]
+
     actions.edit.delete()
-    # actions.app.tab_close()
+    actions.app.tab_close() 
     actions.user.switcher_focus_window(original_window)
     actions.sleep("400ms")
     if submit_draft:
