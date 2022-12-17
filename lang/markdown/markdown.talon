@@ -33,7 +33,10 @@ italic that:
 clozify that:
     text = edit.selected_text()
     edit.delete()
-    "{{c1::{text}}}" 
+    insert(" {{{c1::")
+    insert(text)
+    insert("}}} ")
+#    "/{/{c1::{text}/}/}" 
 # clozify that <number_small>:
 #     text = edit.selected_text()
 #     edit.delete()
