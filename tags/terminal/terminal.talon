@@ -17,3 +17,7 @@ copy paste:
     edit.copy()
     sleep(50ms)
     edit.paste()
+go bottom:
+    key(cmd-down)
+go top:
+    key(cmd-up)
