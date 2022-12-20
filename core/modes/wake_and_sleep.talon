@@ -21,11 +21,6 @@ mode: all
 ^sleepy$: speech.disable()
 ^silly$:
     speech.disable()
-    user.menu_select('Edit|Start Dictation')
-    #sleep(4000ms)
-    #speech.enable()
-    # key(ctrl-alt-cmd-u)
-    #key(ctrl)
-    #sleep(300ms)
-    #key(ctrl)
-    
+    #user.menu_select('Edit|Start Dictation')
+    key(ctrl-alt-cmd-s)
+
