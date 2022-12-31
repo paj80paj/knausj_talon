@@ -5,6 +5,8 @@ is_mac = app.platform == "mac"
 ctx = Context()
 mac_ctx = Context()
 mod = Module()
+mod.tag("vscode_notebook")
+
 mod.apps.vscode = """
 os: mac
 and app.bundle: com.microsoft.VSCode
