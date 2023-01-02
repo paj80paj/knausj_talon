@@ -13,35 +13,35 @@ empty dub string: user.insert_between('"', '"')
 empty escaped (dub string | dub quotes): user.insert_between('\\"', '\\"')
 empty string: user.insert_between("'", "'")
 empty escaped string: user.insert_between("\\'", "\\'")
-(inside parens | args): user.insert_between("(", ")")
-inside (squares | square brackets | list): user.insert_between("[", "]")
+inside (parens | args | round): user.insert_between("(", ")")
+inside (squares | square brackets | box): user.insert_between("[", "]")
 inside (bracket | braces): user.insert_between("{", "}")
 inside percent: user.insert_between("%", "%")
 inside (quotes | string): user.insert_between("'", "'")
-inside (double quotes | dub quotes): user.insert_between('"', '"')
+inside (double quotes | dub quotes | quad ): user.insert_between('"', '"')
 inside (graves | back ticks): user.insert_between("`", "`")
 inside angles: user.insert_between("<", ">")
-angle that:
+(angle | diamond) that:
     text = edit.selected_text()
     user.paste("<{text}>")
-(square | square bracket) that:
+(square | square bracket | box) that:
     text = edit.selected_text()
     user.paste("[{text}]")
-(bracket | brace) that:
+(bracket | brace | curly ) that:
     text = edit.selected_text()
     user.paste("{{{text}}}")
-(parens | args) that:
+(parens | args | round) that:
     text = edit.selected_text()
     user.paste("({text})")
 percent that:
     text = edit.selected_text()
     user.paste("%{text}%")
-quote that:
+(quote | twin) that:
     text = edit.selected_text()
     user.paste("'{text}'")
-(double quote | dub quote) that:
+(double quote | dub quote | quad ) that:
     text = edit.selected_text()
     user.paste('"{text}"')
-(grave | back tick) that:
+(grave | back tick | ski) that:
     text = edit.selected_text()
     user.paste("`{text}`")
