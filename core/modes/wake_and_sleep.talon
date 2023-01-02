@@ -21,6 +21,11 @@ mode: all
 ^sleepy$: speech.disable()
 ^silly$:
     speech.disable()
-    #user.menu_select('Edit|Start Dictation')
     key(ctrl-alt-cmd-s)
-
+^billy$:
+    key('escape')
+    sleep(100ms)
+    user.select_previous_occurrence('billy')
+    edit.delete()
+    sleep(100ms)
+    speech.enable()
