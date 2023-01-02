@@ -49,7 +49,7 @@ mid click:
     mouse_click()
     # close the mouse grid
     # user.grid_close()
-left drag | drag:
+left drag | dragon:
     user.mouse_drag(0)
     # close the mouse grid
     # user.grid_close()
@@ -57,7 +57,8 @@ right drag | righty drag:
     user.mouse_drag(1)
     # close the mouse grid
     # user.grid_close()
-end drag | drag end: user.mouse_drag_end()
+end drag | drag end |drag off: 
+    user.mouse_drag_end()
 wheel down: user.mouse_scroll_down()
 wheel down here:
     user.mouse_move_center_active_window()
@@ -66,7 +67,8 @@ wheel tiny [down]: user.mouse_scroll_down(0.2)
 wheel tiny [down] here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_down(0.2)
-wheel downer: user.mouse_scroll_down_continuous()
+wheel scroller: 
+    user.mouse_scroll_down_continuous()
 wheel downer here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_down_continuous()
@@ -78,7 +80,7 @@ wheel tiny up: user.mouse_scroll_up(0.2)
 wheel tiny up here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_up(0.2)
-wheel upper: user.mouse_scroll_up_continuous()
+wheel upper : user.mouse_scroll_up_continuous()
 wheel upper here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_up_continuous()
@@ -86,7 +88,8 @@ wheel gaze: user.mouse_gaze_scroll()
 wheel gaze here:
     user.mouse_move_center_active_window()
     user.mouse_gaze_scroll()
-wheel stop: user.mouse_scroll_stop()
+wheel stop: 
+    user.mouse_scroll_stop()
 wheel stop here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_stop()
