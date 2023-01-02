@@ -268,6 +268,19 @@ class Actions:
         actions.insert(text)
         return text
 
+    def formatters_reformat_clipboard(formatters: str) -> str:
+        """paste the clipboard in a user specified format"""
+        text = clip.get()
+        if not text:  
+            print("Asked to reformat selection, but nothing selected!")
+            return
+        unformatted = unformat_text(text)
+        # Delete separately for compatibility with programs that don't overwrite
+        # selected text (e.g. Emacs)
+        text = actions.self.formatted_text(unformatted, formatters)
+        actions.insert(text)
+        return text_
+
     def get_formatters_words() -> dict:
         """returns a list of words currently used as formatters, and a demonstration string using those formatters"""
         formatters_help_demo = {}

@@ -17,3 +17,5 @@ select that: user.select_last_phrase()
 before that: user.before_last_phrase()
 nope that | scratch that: user.clear_last_phrase()
 nope that was <user.formatters>: user.formatters_reformat_last(formatters)
+
+paste <user.formatters> that: user.formatters_reformat_clipboard(user.formatters)
