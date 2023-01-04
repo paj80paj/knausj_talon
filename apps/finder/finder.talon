@@ -6,6 +6,7 @@ tag(): user.tabs
 preferences: key(cmd-,)
 options: key(cmd-j)
 search: key(cmd-alt-f)
+hunt all: key(cmd-alt-f)
 
 # bit of a mouthful, but it's probably not the kind of thing you'd be saying frequently
 sort by none: key(ctrl-alt-cmd-0)
