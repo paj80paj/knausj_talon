@@ -22,7 +22,7 @@ mode: all
 ^silly$:
     speech.disable()
     key(ctrl-alt-cmd-s)
-^billy$:
+billy$:
     key('escape')
     sleep(100ms)
     user.select_previous_occurrence('billy')
