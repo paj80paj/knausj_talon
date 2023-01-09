@@ -27,3 +27,12 @@ trash it: key(cmd-backspace)
 
 hide [finder]: key(cmd-h)
 hide others: app.window_hide_others()
+
+file open: 
+    key(cmd-o)  
+
+go top:
+    key(alt-up)
+
+go bottom:
+    key(alt-down)
