@@ -27,7 +27,7 @@ bar search: user.vscode("workbench.view.search")
 bar source: user.vscode("workbench.view.scm")
 bar test: user.vscode("workbench.view.testing.focus")
 bar switch: user.vscode("workbench.action.toggleSidebarVisibility")
-
+                                        
 # Symbol search
 symbol hunt [<user.text>]:
     user.vscode("workbench.action.gotoSymbol")
@@ -280,10 +280,14 @@ cell run above: user.vscode("notebook.cell.executeCellsAbove")
 cell run it: user.vscode("notebook.cell.execute")
 
 install local: user.vscode("workbench.extensions.action.installVSIX")
-preview markdown: user.vscode("markdown.showPreview")
+markdown preview: user.vscode("markdown.showPreview")
 
 focus <user.number_string> : 
     key("cmd-{number_string}")
 
-collapse results:
+(collapse results| results collapse):
     user.vscode("search.action.collapseSearchResults")
+
+dex toggle:
+    user.vscode("cursorless.toggleDecorations")
+
