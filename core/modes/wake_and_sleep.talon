@@ -24,8 +24,8 @@ mode: all
     key(ctrl-alt-cmd-s)
 billy$:
     key('escape')
-    sleep(100ms)
+    sleep(300ms)
     user.select_previous_occurrence('billy')
     edit.delete()
-    sleep(100ms)
+    sleep(300ms)
     speech.enable()
