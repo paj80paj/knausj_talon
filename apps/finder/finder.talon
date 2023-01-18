@@ -18,6 +18,7 @@ sort by date modified: key(ctrl-alt-cmd-5)
 sort by size: key(ctrl-alt-cmd-6)
 
 icon view: key(cmd-1)
+
 column view: key(cmd-3)
 list view: key(cmd-2)
 gallery view: key(cmd-4)
@@ -36,3 +37,19 @@ go top:
 
 go bottom:
     key(alt-down)
+
+folder new:
+    key(shift-cmd-n)
+
+folder open:
+    key(cmd-o)
+
+copify <user.system_path>: 
+    key(cmd-c)
+    user.menu_select('Go|Go to Folder…')
+    sleep(200ms)
+    insert(system_path)
+    sleep(200ms)
+    key(enter)
+    key(cmd-v)
+
