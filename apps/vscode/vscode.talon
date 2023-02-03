@@ -291,3 +291,5 @@ focus <user.number_string> :
 dex toggle:
     user.vscode("cursorless.toggleDecorations")
 
+search editor:
+    user.vscode("search.action.openInEditor")
