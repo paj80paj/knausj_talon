@@ -53,3 +53,6 @@ copify <user.system_path>:
     key(enter)
     key(cmd-v)
 
+show hidden:
+    # “Command” + “Shift” + “.”
+    key(cmd-shift-.)
