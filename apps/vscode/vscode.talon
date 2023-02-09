@@ -282,8 +282,7 @@ cell run it: user.vscode("notebook.cell.execute")
 install local: user.vscode("workbench.extensions.action.installVSIX")
 markdown preview: user.vscode("markdown.showPreview")
 
-focus <user.number_string> : 
-    key("cmd-{number_string}")
+focus <user.number_string> : key("cmd-number_string}")
 
 (collapse results| results collapse):
     user.vscode("search.action.collapseSearchResults")
@@ -291,5 +290,49 @@ focus <user.number_string> :
 dex toggle:
     user.vscode("cursorless.toggleDecorations")
 
-search editor:
+line break <user.cursorless_target>:
+    user.cursorless_command("setSelectionBefore", cursorless_target)
+    key("enter")
+
+search open in:
     user.vscode("search.action.openInEditor")
+
+hunted:
+    user.vscode("search.action.openEditor")
+    sleep(500ms)
+    insert(user.text or "")
+
+hunted [<user.text>] :
+    user.vscode("search.action.openEditor")
+    sleep(100ms)
+    insert(user.text or "")
+
+search rerun:
+    user.vscode("rerunSearchEditorSearch")
+
+search case:
+    user.vscode("toggleSearchEditorCaseSensitive")
+
+search next:
+    user.vscode("search.action.focusNextSearchResult")
+
+search previous:
+    user.vscode("search.action.focusPreviousSearchResult")
+
+search context:
+    user.vscode("toggleSearchEditorContextLines")
+
+search more:
+    user.vscode("increaseSearchEditorContextLines")
+
+search less:
+    user.vscode("decreaseSearchEditorContextLines")
+
+search query:
+    user.vscode("search.action.focusQueryEditorWidget")
+
+search exclude:
+    user.vscode("search.action.focusFilesToExclude")
+
+search include:
+    user.vscode("search.action.focusFilesToInclude")
