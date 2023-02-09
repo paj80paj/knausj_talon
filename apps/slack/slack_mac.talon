@@ -1,6 +1,8 @@
 os: mac
 app: slack
 -
+settings():
+    insert_wait = 1
 tag(): user.messaging
 tag(): user.emoji
 
