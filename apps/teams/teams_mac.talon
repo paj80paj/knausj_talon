@@ -1,7 +1,9 @@
 os: mac
 app: com.microsoft.teams
 -
-
+settings():
+    insert_wait = 1
+    
 # navigations
 open history: key(cmd-shift-h)
 open commands: key(cmd-/)
