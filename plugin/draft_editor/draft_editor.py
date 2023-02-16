@@ -1,3 +1,4 @@
+from uuid import uuid4
 from talon import Context, Module, actions, ui
 
 mod = Module()
@@ -63,38 +64,44 @@ original_window = None
 
 last_draft = None
 
-
 @mod.action_class
 class Actions:
     def draft_editor_open():
         """Open draft editor"""
         global original_window
         original_window = ui.active_window()
-        actions.sleep("400ms")
         editor_app = get_editor_app()
-        actions.sleep("400ms")
         selected_text = actions.edit.selected_text()
-        print(f"********* {selected_text=}")
-        
-        actions.sleep("400ms")
         actions.user.switcher_focus_app(editor_app)
+        
+        # Wait additional time for talon context to update.
+        actions.sleep("200ms")
         actions.key('ctrl-w')
-        actions.sleep('200ms')
-        actions.insert("dendron")
-        actions.sleep('200ms')
-        actions.key('enter')
-        # raise RuntimeError(f"xxxxxxxxx {editor_app=}")
-        # Wait additiona1l time for talon context to update.
         actions.sleep("200ms")
-        # actions.app.tab_open()
-        # we want to create a scratch note in Dendron
-        actions.user.vscode("dendron.createScratchNote")
+        actions.insert("foam-brain")
         actions.sleep("200ms")
         actions.key('enter')
+        actions.sleep("200ms")
+        actions.app.tab_open()
         actions.sleep("200ms")
         if selected_text != "":
             actions.user.paste(selected_text)
         add_tag("user.draft_editor_active")
+
+    def draft_editor_open_app():
+        """Open draft editor"""
+        global original_window
+        original_window = ui.active_window()
+        editor_app = get_editor_app()
+        selected_text = actions.edit.selected_text()
+        actions.user.switcher_focus_app(editor_app)
+        # Wait additional time for talon context to update.
+        actions.sleep("200ms")
+        actions.app.tab_open()
+        if selected_text != "":
+            actions.user.paste(selected_text)
+        add_tag("user.draft_editor_active")
+    
 
     def draft_editor_submit():
         """Submit/save draft editor"""
@@ -119,21 +126,19 @@ def get_editor_app() -> ui.App:
 
     raise RuntimeError("Draft editor is not running")
 
-
 def close_editor(submit_draft: bool):
     global last_draft
     remove_tag("user.draft_editor_active")
     actions.edit.select_all()
-    actions.sleep("400ms")
+    actions.sleep("300ms")
     selected_text = actions.edit.selected_text()
-    selected_text = selected_text.split("---")
-    # this will remove the front matter
-    selected_text = selected_text[2]
-
     actions.edit.delete()
     actions.app.tab_close() 
     actions.user.switcher_focus_window(original_window)
     actions.sleep("400ms")
+
     if submit_draft:
         last_draft = selected_text
-        actions.user.paste(selected_text)
+        actions.insert(selected_text)
+
+
