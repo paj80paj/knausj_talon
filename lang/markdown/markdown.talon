@@ -71,6 +71,20 @@ table add:
 table header:
     user.vscode("md-shortcut.addTableWithHeader")
 
+hunt tag:
+    # lookup a note using only text prefixed by one or more hash
+    key(cmd-t)
+
+today insert:
+    #insert a date in the Dendron format
+    insert(user.time_format_utc("%Y-%m-%d"))
+
+hunt hash:
+    # jump to a header in the current note
+    key(cmd-shift-o)
+
+
+
 # user.vscode("md-shortcut.toggleLink")
 # user.vscode("md-shortcut.toggleImage")
 # user.vscode("md-shortcut.toggleTable")
