@@ -83,7 +83,10 @@ hunt hash:
     # jump to a header in the current note
     key(cmd-shift-o)
 
-
+wiki link that:
+    text = edit.selected_text()
+    user.paste("[[{text}]]")
+    
 
 # user.vscode("md-shortcut.toggleLink")
 # user.vscode("md-shortcut.toggleImage")
