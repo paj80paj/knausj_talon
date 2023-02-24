@@ -27,6 +27,8 @@ bar search: user.vscode("workbench.view.search")
 bar source: user.vscode("workbench.view.scm")
 bar test: user.vscode("workbench.view.testing.focus")
 bar switch: user.vscode("workbench.action.toggleSidebarVisibility")
+
+activity switch: user.vscode("workbench.action.toggleActivityBarVisibility")
                                         
 # Symbol search
 symbol hunt [<user.text>]:
