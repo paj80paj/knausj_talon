@@ -30,10 +30,14 @@ dictate$ :
 command mode: 
     speech.enable()
     mode.enable("command")
+    mode.disable("user.silly")
     mode.disable("dictation")
     
 ^silly$:
-    speech.disable()
+    mode.disable("dictation")
+    mode.disable("command")
+    mode.enable("user.silly")
+    #speech.disable()
     key(ctrl-alt-cmd-s)
 
 billy$:
@@ -42,4 +46,8 @@ billy$:
     user.select_previous_occurrence('billy')
     edit.delete()
     sleep(300ms)
+    mode.disable("user.silly")
+    
     speech.enable()
+    mode.enable("command")
+    mode.disable("dictation")
