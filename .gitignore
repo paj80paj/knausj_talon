@@ -5,7 +5,5 @@ __pycache__
 # Locally generated
 # /settings
 .vscode/settings.json
-apps/.DS_Store
 .DS_Store
-.DS_Store
-apps/.DS_Store
+/settings/my_contacts.csv
