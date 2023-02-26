@@ -15,23 +15,36 @@ hash remove:
     insert(user.replace_everywhere("#", ""))
     #user.replace("")
 
+trim start:
+    edit.extend_line_start()
+    edit.indent_less()
+    edit.delete()
+    
+
 level first:
+    edit.line_start()
     user.vscode("md-shortcut.toggleTitleH1")
 
 level second:
+    edit.line_start()
     user.vscode("md-shortcut.toggleTitleH2")
 
 level third:
+    edit.line_start()
     user.vscode("md-shortcut.toggleTitleH3")
     
 level forth:
+    edit.line_start()
     user.vscode("md-shortcut.toggleTitleH4")
 
 level fifth:
+    edit.line_start()
     user.vscode("md-shortcut.toggleTitleH5")
 
 level sixth:
+    edit.line_start()
     user.vscode("md-shortcut.toggleTitleH6")
+    
     
 bold that:
     user.vscode("md-shortcut.toggleBold")
@@ -101,7 +114,7 @@ wiki link that:
 # md-shortcut.toggleInlineCode
 # md-shortcut.toggleBullets
 # md-shortcut.toggleNumbers
-# md-shortcut.toggleCheckboxes
+# md-shortcut.toggleCheactions.edit.line_end()ckboxes
 # md-shortcut.toggleTitleH1	
 # md-shortcut.toggleTitleH2	
 # md-shortcut.toggleTitleH3
