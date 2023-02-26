@@ -51,6 +51,11 @@ move [selected] team down: key(cmd-shift-down)
 [go] [to] (prev | previous) section: key(cmd-shift-f6)
 [go] [to] next section: key(cmd-f6)
 
+go to today:key(cmd-t)
+slide right:key(cmd-alt-right)
+slide left:key(cmd-alt-left)
+
+
 # messaging
 [go] [to] compose [box]: key(shift-alt-c)
 [expand] compose [box]: key(cmd-shift-x)
