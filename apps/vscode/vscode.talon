@@ -31,8 +31,8 @@ bar switch: user.vscode("workbench.action.toggleSidebarVisibility")
 bar focus: key(cmd-0)
 bar unfocus: key(cmd-1)
 
-activity switch: user.vscode("workbench.action.toggleActivityBarVisibility")
-                                        
+activity (toggle|switch): user.vscode("workbench.action.toggleActivityBarVisibility")
+                                    
 # Symbol search
 symbol hunt [<user.text>]:
     user.vscode("workbench.action.gotoSymbol")
