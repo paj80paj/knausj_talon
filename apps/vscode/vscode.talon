@@ -28,6 +28,9 @@ bar source: user.vscode("workbench.view.scm")
 bar test: user.vscode("workbench.view.testing.focus")
 bar switch: user.vscode("workbench.action.toggleSidebarVisibility")
 
+bar focus: key(cmd-0)
+bar unfocus: key(cmd-1)
+
 activity switch: user.vscode("workbench.action.toggleActivityBarVisibility")
                                         
 # Symbol search
