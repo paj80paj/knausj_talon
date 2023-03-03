@@ -48,6 +48,8 @@ billy$:
     sleep(300ms)
     mode.disable("user.silly")
     
-    speech.enable()
+    #speech.enable()
     mode.enable("command")
     mode.disable("dictation")
+
+    
