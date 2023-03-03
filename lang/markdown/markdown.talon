@@ -2,6 +2,9 @@
 tag: user.markdown
 -
 
+file lint:
+    user.vscode("markdownlint.lintWorkspace")
+    
 clozify that:
     text = edit.selected_text()
     edit.delete()
@@ -114,7 +117,7 @@ wiki link that:
 # md-shortcut.toggleInlineCode
 # md-shortcut.toggleBullets
 # md-shortcut.toggleNumbers
-# md-shortcut.toggleCheactions.edit.line_end()ckboxes
+# md-shortcut.toggleCheckboxes
 # md-shortcut.toggleTitleH1	
 # md-shortcut.toggleTitleH2	
 # md-shortcut.toggleTitleH3
