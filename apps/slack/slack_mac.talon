@@ -44,15 +44,15 @@ bold: key(cmd-b)
 (strike | strikethrough): key(cmd-shift-x)
 (slack | lack) snippet: key(cmd-shift-enter)
 # Calls
-([toggle] mute | unmute): key(m)
+mute toggle: key(m)
 (slack | lack) huddle: key(cmd-shift-h)
 (slack | lack) ([toggle] video): key(v)
 (slack | lack) invite: key(a)
 # Miscellaneous
 (slack | lack) show shortcuts: key(cmd-/)
 emote <user.text>: "{text}"
-toggle left sidebar: key(cmd-shift-d)
-toggle right sidebar: key(cmd-.)
+left sidebar toggle: key(cmd-shift-d)
+right sidebar toggle: key(cmd-.)
 
 # DEPRECATED
 (move | next) focus:

@@ -39,14 +39,14 @@ bold: key(ctrl-b)
 (strike | strikethrough): key(ctrl-shift-x)
 (slack | lack) snippet: key(ctrl-shift-enter)
 # Calls
-([toggle] mute | unmute): key(m)
+mute toggle: key(m)
 (slack | lack) ([toggle] video): key(v)
 (slack | lack) invite: key(a)
 # Miscellaneous
 (slack | lack) shortcuts: key(ctrl-/)
 emote <user.text>: "{text}"
-toggle left sidebar: key(ctrl-shift-d)
-toggle right sidebar: key(ctrl-.)
+left sidebar toggle: key(ctrl-shift-d)
+right sidebar toggle: key(ctrl-.)
 
 # DEPRECATED
 (move | next) focus:
