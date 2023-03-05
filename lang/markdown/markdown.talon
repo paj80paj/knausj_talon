@@ -22,33 +22,18 @@ trim start:
     edit.extend_line_start()
     edit.indent_less()
     edit.delete()
-    
 
-level first:
-    edit.line_start()
-    user.vscode("md-shortcut.toggleTitleH1")
+level <user.ordinals>:
+    n = ordinals or 1
+    edit.select_line()
+    sleep(180ms)
+    text = edit.selected_text()
+    edit.delete()
+    text = user.remove_leading_punctuation(text)
+    insert("#"*n)
+    " "
+    user.insert_formatted(text or "", "CAPITALIZE_ALL_WORDS")
 
-level second:
-    edit.line_start()
-    user.vscode("md-shortcut.toggleTitleH2")
-
-level third:
-    edit.line_start()
-    user.vscode("md-shortcut.toggleTitleH3")
-    
-level forth:
-    edit.line_start()
-    user.vscode("md-shortcut.toggleTitleH4")
-
-level fifth:
-    edit.line_start()
-    user.vscode("md-shortcut.toggleTitleH5")
-
-level sixth:
-    edit.line_start()
-    user.vscode("md-shortcut.toggleTitleH6")
-    
-    
 bold that:
     user.vscode("md-shortcut.toggleBold")
     
