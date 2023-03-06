@@ -19,6 +19,9 @@ mode: all
 
 wakey wakey$ : 
     speech.enable()
+    mode.enable("command")
+    mode.disable("user.silly")
+    mode.disable("dictation")
 
 dictate$ : 
     speech.enable()
