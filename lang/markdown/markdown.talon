@@ -33,38 +33,87 @@ level <user.ordinals>:
     insert("#"*n)
     " "
     user.insert_formatted(text or "", "CAPITALIZE_ALL_WORDS")
+    
+(level none)|(line clear):
+    edit.select_line()
+    sleep(180ms)
+    text = edit.selected_text()
+    edit.delete()
+    text = user.remove_leading_punctuation(text)
+    insert(text or "")
+
+line number:
+    edit.select_line()
+    sleep(180ms)
+    text = edit.selected_text()
+    edit.delete()
+    text = user.remove_leading_punctuation(text)
+    insert("1. ")
+    insert(text or "")
+        
+line bullet:
+    edit.select_line()
+    sleep(180ms)
+    text = edit.selected_text()
+    edit.delete()
+    text = user.remove_leading_punctuation(text)
+    insert("- ")
+    insert(text or "")
+
+# line no punk:
+#     text = edit.selected_text()
+#     sleep(280ms)
+#     edit.delete()
+#     sleep(280ms)
+#     result = user.remove_punctuation(text)
+#     insert("{text}")
+
+# task done:
+#     edit.select_line()
+#     sleep(180ms)
+#     text = edit.selected_text()
+#     edit.delete()
+#     text = user.remove_leading_punctuation(text)
+#     insert("- [x] ")
+#     insert(text or "")
+
+# task undone:
+#     edit.select_line()
+#     sleep(180ms)
+#     text = edit.selected_text()
+#     edit.delete()
+#     text = user.remove_leading_punctuation(text)
+#     insert("- [ ] ")
+#     insert(text or "")
 
 bold that:
-    user.vscode("md-shortcut.toggleBold")
-    
+    text = edit.selected_text()
+    sleep(280ms)
+    edit.delete()
+    result = user.remove_punctuation(text)
+    insert("__{result}__")
+
 italic that:
-    user.vscode("md-shortcut.toggleItalic")
+    text = edit.selected_text()
+    sleep(280ms)
+    edit.delete()
+    text = user.remove_punctuation(text)
+    insert("_{text}_")
 
-strike through that:
-    user.vscode("md-shortcut.toggleStrikethrough")
-
-# user.vscode("md-shortcut.toggleLink")
-
-# user.vscode("md-shortcut.toggleCodeSpan")
-# user.vscode("md-shortcut.toggleMath")
-
-level up:
-    user.vscode("md-shortcut.toggleHeadingUp")
-
-level down:
-    user.vscode("md-shortcut.toggleHeadingDown")
-
-block quote:
-    user.vscode("md-shortcut.toggleBlockquote")
-
-number line:
-    user.vscode("md-shortcut.toggleNumbers")
+inline that:
+    text = edit.selected_text()
+    sleep(280ms)
+    edit.delete()
+#   text = user.remove_punctuation(text)
+    insert("`{text}`")
     
-bullet line:
-    user.vscode("md-shortcut.toggleBullets")
+strike through that:
+    text = edit.selected_text()
+    sleep(280ms)
+    edit.delete()
+    result = user.remove_punctuation(text)
+    insert("~~{result}~~")
 
-task line:
-    user.vscode("md-shortcut.toggleTaskList")
     
 table add:
     user.vscode("md-shortcut.addTable")
