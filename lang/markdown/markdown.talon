@@ -3,7 +3,7 @@ tag: user.markdown
 -
 
 file lint:
-    user.vscode("markdownlint.lintWorkspace")
+    user.vscode("markdownlint.fixAll")
     
 clozify that:
     text = edit.selected_text()
