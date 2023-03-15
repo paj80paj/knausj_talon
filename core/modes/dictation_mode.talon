@@ -1,4 +1,5 @@
 mode: dictation
+experiment: anchor-file get stage
 -
 ^press <user.modifiers>$: key(modifiers)
 ^press <user.keys>$: key(keys)
@@ -6,7 +7,7 @@ mode: dictation
 # Everything here should call `user.dictation_insert()` instead of `insert()`, to correctly auto-capitalize/auto-space.
 <user.raw_prose>: user.dictation_insert(raw_prose)
 cap: user.dictation_format_cap()
-# Hyphenated variants are for Dragon.
+# Hyphenated variants are git for Dragon.
 (no cap | no-caps): user.dictation_format_no_cap()
 (no space | no-space): user.dictation_format_no_space()
 ^cap that$: user.dictation_reformat_cap()
