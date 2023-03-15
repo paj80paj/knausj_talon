@@ -286,6 +286,7 @@ cell run it: user.vscode("notebook.cell.execute")
 
 install local: user.vscode("workbench.extensions.action.installVSIX")
 markdown preview: user.vscode("markdown.showPreview")
+markdown pre side: user.vscode("markdown.showPreviewToSide")
 
 focus <user.number_string> : key("cmd-number_string}")
 
