@@ -12,7 +12,13 @@ mode: all
     user.mouse_sleep()
     speech.disable()
     user.engine_sleep()
+#hide help:
+    # user.help_hide()
+    # user.homophones_hide()
+    # user.switcher_hide_running()
+    # user.help_scope_toggle()
 ^talon sleep [<phrase>]$: speech.disable()
+
 ^drowse [<phrase>]$: speech.disable()
 ^drowsing [<phrase>]: speech.disable()
 ^talon wake$: speech.enable()
@@ -39,20 +45,22 @@ command mode:
 ^silly$:
     mode.disable("dictation")
     mode.disable("command")
+    mode.enable("sleep")
     mode.enable("user.silly")
+    
     #speech.disable()
     key(ctrl-alt-cmd-s)
 
-billy$:
-    key('escape')
-    sleep(300ms)
-    user.select_previous_occurrence('billy')
-    edit.delete()
-    sleep(300ms)
-    mode.disable("user.silly")
-    
-    #speech.enable()
-    mode.enable("command")
-    mode.disable("dictation")
+# billy$:
+#     key('escape')
+#     sleep(300ms)
+#     user.select_previous_occurrence('billy')
+#     sleep(300ms)
+#     edit.delete()
+#     sleep(300ms)
+#     mode.disable("user.silly")
+#     #speech.enable()
+#     mode.enable("command")
+#     mode.disable("dictation")
 
     
