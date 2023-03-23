@@ -1,6 +1,5 @@
 Replacement,Original
 Paul,poll
-Paul
 Chinmay Upadhyay,Chinmay
 Alessandro Ferretti,Alessandro
 Johannes Bauer,Johannes
@@ -16,6 +15,7 @@ Alain Biem, Alain
 Jitendra Rudravaram, Jitendra
 Marvin Nicholson, Marvin
 Edward Down,ted
+Alec Gosse, Alec
 Len Delicaet, Len
 Jessie Judd, Jessie
 Ashna Rahman, Ashna
@@ -28,7 +28,20 @@ David Riehl, David Reel
 Mark Findlay, Mark Findlay
 Eric Takigawa, Eric
 Debashis Law, Debashis
+Ganesh Nagarathnam, Ganesh
+Farooq Hassan, Farooq
+
 #prj_eagle, project eagle
 #prj_chat, project chat
 #prj_comps, project comps
 #prj_workflow, project workflow
+
+TDY , do today
+2DO , to do
+SMD , some day
+DUN , done
+MEM , remember
+QUE , question
+
+_rust_beta, rust beta
+_meet_up, meet up
