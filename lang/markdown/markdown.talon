@@ -2,7 +2,11 @@
 tag: user.markdown
 -
 
-file lint:
+
+link follow:
+    user.vscode("editor.action.openLink")
+
+file linting:
     user.vscode("markdownlint.fixAll")
     
 clozify that:
@@ -60,7 +64,16 @@ line bullet:
     insert("- ")
     insert(text or "")
 
-# line no punk:
+line quoted:
+    edit.select_line()
+    sleep(180ms)
+    text = edit.selected_text()
+    edit.delete()
+    text = user.remove_leading_punctuation(text)
+    insert("> ")
+    insert(text or "")
+
+    # line no punk:
 #     text = edit.selected_text()
 #     sleep(280ms)
 #     edit.delete()
@@ -68,7 +81,34 @@ line bullet:
 #     result = user.remove_punctuation(text)
 #     insert("{text}")
 
-# task done:
+tree toggle:
+    user.vscode("workbench.view.extension.todo-tree-container")
+
+to do toggle:
+    user.vscode("markdown.extension.checkTaskList")
+    # key(alt-c)
+
+to do make:
+    edit.select_line()
+    sleep(180ms)
+    text = edit.selected_text()
+    edit.delete()
+    text = user.remove_leading_punctuation(text)
+    insert("- [ ] ")
+    insert(text or "")
+
+# tasWhen you kiss ML sometimes but git dislike he will You've the things you dislike you for his antagonism and his wherever is unreasonablenessk make:
+#     # 10markdown.extension.checkTaskList
+
+#     text = edit.selected_text()
+#     edit.delete()
+#     sleep(180ms)
+#     result = user.create_markdown_tasks(text)
+#     sleep(180ms)
+#     insert(result)
+
+
+
 #     edit.select_line()
 #     sleep(180ms)
 #     text = edit.selected_text()
@@ -77,14 +117,7 @@ line bullet:
 #     insert("- [x] ")
 #     insert(text or "")
 
-# task undone:
-#     edit.select_line()
-#     sleep(180ms)
-#     text = edit.selected_text()
-#     edit.delete()
-#     text = user.remove_leading_punctuation(text)
-#     insert("- [ ] ")
-#     insert(text or "")
+
 
 bold that:
     text = edit.selected_text()
@@ -104,7 +137,6 @@ inline that:
     text = edit.selected_text()
     sleep(280ms)
     edit.delete()
-#   text = user.remove_punctuation(text)
     insert("`{text}`")
     
 strike through that:
