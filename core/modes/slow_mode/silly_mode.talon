@@ -6,8 +6,12 @@ mode: user.silly
 
 billy: 
     key('escape')
+    sleep(300ms)
+    user.select_previous_occurrence('billy')
+    sleep(300ms)
+    edit.delete()
     mode.disable("user.silly")
-    sleep(100ms)
     mode.disable("sleep")
     mode.disable("dictation")
     mode.enable("command")
+    key('escape')
