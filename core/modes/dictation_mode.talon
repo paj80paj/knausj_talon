@@ -1,6 +1,13 @@
 mode: dictation
 experiment: anchor-file get stage
 -
+
+^comi$: 
+    # speech.enable()
+    mode.disable("dictation")
+    # mode.disable("user.silly")
+    mode.enable("command")
+
 ^press <user.modifiers>$: key(modifiers)
 ^press <user.keys>$: key(keys)
 

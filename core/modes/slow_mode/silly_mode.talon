@@ -11,7 +11,16 @@ billy:
     sleep(300ms)
     edit.delete()
     mode.disable("user.silly")
-    mode.disable("sleep")
-    mode.disable("dictation")
+
     mode.enable("command")
+
+
+drowse [<phrase>]$: speech.disable()    
     key('escape')
+    sleep(300ms)
+    user.select_previous_occurrence('drowse')
+    sleep(300ms)
+    edit.delete()
+    mode.disable("user.silly")
+
+    mode.enable("sleep")
