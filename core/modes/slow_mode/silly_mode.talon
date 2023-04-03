@@ -11,6 +11,7 @@ billy:
     sleep(300ms)
     edit.delete()
     mode.disable("user.silly")
+    mode.disable("sleep")
 
     mode.enable("command")
 
@@ -22,5 +23,5 @@ drowse [<phrase>]$: speech.disable()
     sleep(300ms)
     edit.delete()
     mode.disable("user.silly")
-
     mode.enable("sleep")
+

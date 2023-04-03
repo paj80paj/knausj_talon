@@ -3,7 +3,7 @@ mode: command
 
 -
 
-(drowse | drowsing) [<phrase>]$: 
+(drowsey) [<phrase>]$: 
     mode.disable("command")
     mode.disable("dictation")
     mode.enable("sleep")

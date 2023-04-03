@@ -1,5 +1,5 @@
 mode: dictation
-experiment: anchor-file get stage
+experiment: anchor-file
 -
 
 ^comi$: 

@@ -4,6 +4,7 @@ mode : command
 ^silly$:
     mode.disable("command")
     mode.enable("user.silly")
+    mode.enable("sleep")
     key(ctrl-alt-cmd-s)
 
 dictate$ : 
