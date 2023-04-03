@@ -10,6 +10,28 @@ go left: edit.left()
 
 go right: edit.right()
 
+west: edit.left()
+east: edit.right()
+
+west wipe:
+    edit.extend_left()
+    edit.delete()
+
+east wipe:
+    edit.extend_right()
+    edit.delete()
+
+westword: edit.word_left()
+eastword: edit.word_right()
+
+westword wipe:
+    edit.extend_word_left()
+    edit.delete()
+
+eastword wipe: 
+    edit.extend_word_right()
+    edit.delete()
+
 go up: edit.up()
 
 go down: edit.down()
