@@ -8,6 +8,7 @@ tag(): user.snippets
 tag(): user.splits
 tag(): user.tabs
 tag(): user.vscode_notebook
+tag(): user.cursorless_experimental_snippetsP
 
 window reload: user.vscode("workbench.action.reloadWindow")
 window close: user.vscode("workbench.action.closeWindow")
@@ -70,6 +71,7 @@ wrap switch: user.vscode("editor.action.toggleWordWrap")
 zen switch: user.vscode("workbench.action.toggleZenMode")
 
 # File Commands
+file python: user.vscode("python.createNewFile")
 file hunt [<user.text>]:
     user.vscode("workbench.action.quickOpen")
     sleep(50ms)
@@ -166,6 +168,7 @@ fold six: user.vscode("editor.foldLevel6")
 fold seven: user.vscode("editor.foldLevel7")
 
 # Git / Github (not using verb-noun-adjective pattern, mirroring terminal commands.)
+git file history: user.vscode("gitlens.views.fileHistory.focus")
 git branch: user.vscode("git.branchFrom")
 git branch this: user.vscode("git.branch")
 git checkout [<user.text>]:

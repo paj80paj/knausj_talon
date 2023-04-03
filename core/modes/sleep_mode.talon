@@ -10,4 +10,4 @@ wakey wakey$ :
     mode.enable("command")
     mode.disable("sleep")
 
-# put parrt wake up noise in here.
+# put parrt wake up noise in here.fp51P

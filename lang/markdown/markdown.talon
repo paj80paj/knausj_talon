@@ -6,8 +6,7 @@ tag: user.markdown
 link follow:
     user.vscode("editor.action.openLink")
 
-file linting:
-    user.vscode("markdownlint.fixAll")
+
     
 clozify that:
     text = edit.selected_text()
@@ -81,8 +80,7 @@ line quoted:
 #     result = user.remove_punctuation(text)
 #     insert("{text}")
 
-tree toggle:
-    user.vscode("workbench.view.extension.todo-tree-container")
+
 
 to do toggle:
     user.vscode("markdown.extension.checkTaskList")
@@ -147,22 +145,13 @@ strike through that:
     insert("~~{result}~~")
 
     
-table add:
-    user.vscode("md-shortcut.addTable")
-
-table header:
-    user.vscode("md-shortcut.addTableWithHeader")
-
-hunt tag:
-    # lookup a note using only text prefixed by one or more hash
-    key(cmd-t)
 
 today insert:
     #insert a date in the Dendron format
     insert(user.time_format_utc("%Y-%m-%d"))
 
 hunt hash:
-    # jump to a header in the current note
+    # jump to a header in the l note
     key(cmd-shift-o)
 
 wiki link that:
@@ -190,4 +179,5 @@ wiki link that:
 # md-shortcut.toggleTitleH4
 # md-shortcut.toggleTitleH5	
 # md-shortcut.toggleTitleH6
+
 
