@@ -345,3 +345,7 @@ search exclude:
 
 search include:
     user.vscode("search.action.focusFilesToInclude")
+
+search apply:
+    user.vscode("searchEditorApplyChanges.apply")
+
