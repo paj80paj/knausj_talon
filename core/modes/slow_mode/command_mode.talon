@@ -15,3 +15,12 @@ digo$ :
 
 ^mixed mode$:
     mode.enable("dictation")
+
+key(§:up): 
+    mode.disable("dictation")
+    mode.enable("command")
+
+key(§:down): 
+    mode.disable("sleep")
+    mode.disable("command")
+    mode.enable("dictation")

@@ -30,11 +30,20 @@ Eric Takigawa, Eric
 Debashis Law, Debashis
 Ganesh Nagarathnam, Ganesh
 Farooq Hassan, Farooq
+Siamak Mashoof, Simak
+Gavan Nolan, Gavan
+Grzegorz Chlodzinski, Gregosh
+
+
 
 #prj_eagle, project eagle
 #prj_chat, project chat
 #prj_comps, project comps
 #prj_workflow, project workflow
+#prj_quantlake, project quantlake
+#prj_ML, project machine learning
+#prj_ML, project ML
+
 
 TDY , do today
 2DO , to do
@@ -44,4 +53,6 @@ MEM , remember
 QUE , question
 
 _rust_beta, rust beta
-_meet_up, meet up
+_meet_up, meet up talon
+
+#talon, talon

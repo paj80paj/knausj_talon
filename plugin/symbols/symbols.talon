@@ -6,7 +6,7 @@ ellipses: "..."
 (comma and | spamma): ", "
 arrow: "->"
 dub arrow: "=>"
-new line: "\\n"
+#new line: "\\n"
 carriage return: "\\r"
 line feed: "\\r\\n"
 empty dub string: user.insert_between('"', '"')

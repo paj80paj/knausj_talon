@@ -11,3 +11,14 @@ wakey wakey$ :
     mode.disable("sleep")
 
 # put parrt wake up noise in here.fp51P
+
+# key(§:up): 
+#     print("up")
+#     # mode.enable("command")
+#     # mode.disable("sleep")
+
+# key(§:down): 
+#     print("downxxxxx")
+#     # mode.enable("command")
+#     # mode.disable("sleep").net'right it's so cool'
+
