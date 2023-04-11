@@ -17,5 +17,5 @@ my_note_groups = get_list_from_csv(
     headers=("Replacement","Original"),
          default="default_contacts") #key_first=True)
 
-
+# ctx.lists Now has an element which can be populated with the data we just read from a CSV file.
 ctx.lists["user.my_note_groups"] = my_note_groups
