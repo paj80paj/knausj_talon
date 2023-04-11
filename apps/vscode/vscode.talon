@@ -8,7 +8,7 @@ tag(): user.snippets
 tag(): user.splits
 tag(): user.tabs
 tag(): user.vscode_notebook
-tag(): user.cursorless_experimental_snippetsP
+tag(): user.cursorless_experimental_snippets
 
 window reload: user.vscode("workbench.action.reloadWindow")
 window close: user.vscode("workbench.action.closeWindow")
@@ -258,6 +258,10 @@ copy line up: user.vscode("editor.action.copyLinesUpAction")
 select less: user.vscode("editor.action.smartSelect.shrink")
 select (more | this): user.vscode("editor.action.smartSelect.expand")
 
+Selection all: user.vscode("actions.findWithSelection")
+Selection next: user.vscode("editor.action.addSelectionToNextFindMatch")
+
+
 minimap toggle: user.vscode("editor.action.toggleMinimap")
 maximize: user.vscode("workbench.action.minimizeOtherEditors")
 restore: user.vscode("workbench.action.evenEditorWidths")
@@ -345,6 +349,9 @@ search exclude:
 
 search include:
     user.vscode("search.action.focusFilesToInclude")
+
+search regex:
+    user.vscode("toggleSearchEditorRegex")
 
 search apply:
     user.vscode("searchEditorApplyChanges.apply")
