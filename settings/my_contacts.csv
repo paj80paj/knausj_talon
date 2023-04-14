@@ -43,6 +43,8 @@ prj_workflow, project workflow
 prj_quantlake, project quantlake
 prj_ML, project machine learning
 prj_ML, project ML
+prj_holidays,Project holidays
+prj_misc,Project miscellaneous
 
 
 _rust_beta, rust beta
@@ -50,8 +52,8 @@ _meet_up, meet up talon
 
 talon, talon
 
-Bilateral Meeting, Bilateral 
-Group Meeting, Group 
+Bilateral Meeting, Bilateral
+Group Meeting, Group
 Literature Note, Literature 
 New Project, Project
 Zettel, Zettel
