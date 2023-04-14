@@ -113,3 +113,9 @@ copy mouse position: user.copy_mouse_position()
 curse no:
     # Command added 2021-12-13, can remove after 2022-06-01
     app.notify("Please activate the user.mouse_cursor_commands_enable tag to enable this command")
+click left:
+    user.mouse_move_left_third()
+    mouse_click()
+click right:
+    user.mouse_move_right_third()
+    mouse_click()

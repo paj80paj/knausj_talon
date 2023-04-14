@@ -242,6 +242,14 @@ class Actions:
         rect = ui.active_window().rect
         ctrl.mouse_move(rect.left + (rect.width / 2), rect.top + (rect.height / 2))
 
+    def mouse_move_right_third():
+        """move the mouse cursor to the center of the currently active window"""
+        ctrl.mouse_move(3256.5859375, 1059.32421875)
+
+    def mouse_move_left_third():
+        """move the mouse cursor to the center of the currently active window"""
+        ctrl.mouse_move(1023.06640625, 980.9609375)
+
 
 def show_cursor_helper(show):
     """Show/hide the cursor"""
