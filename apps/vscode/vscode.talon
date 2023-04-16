@@ -202,6 +202,7 @@ git stage that:
 git stage all: user.vscode("git.stageAll")
 git sync: user.vscode("git.sync")
 git unstage: user.vscode("git.unstage")
+git discard: user.vscode("git.clean")
 git unstage all: user.vscode("git.unstageAll")
 pull request: user.vscode("pr.create")
 # Use keyboard shortcuts because VSCode relies on when clause contexts to choose the appropriate
@@ -284,7 +285,6 @@ curse undo: user.vscode("cursorUndo")
 
 select word: user.vscode("editor.action.addSelectionToNextFindMatch")
 skip word: user.vscode("editor.action.moveSelectionToNextFindMatch")
-
 # jupyter
 cell next: user.vscode("notebook.focusNextEditor")
 cell last: user.vscode("notebook.focusPreviousEditor")
