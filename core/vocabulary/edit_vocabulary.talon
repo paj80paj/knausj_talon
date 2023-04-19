@@ -15,14 +15,14 @@ mode: dictation
 # Automatically adds plural form by simply appending "s".
 # copy noun to replacements as <phrase>$:
 #     user.add_selection_to_words_to_replace(phrase, "noun")
-vocab copy [as <phrase>]$: user.add_selection_to_vocabulary(phrase or "")
-vocab name copy [as <phrase>]$:
+vocab add [as <phrase>]$: user.add_selection_to_vocabulary(phrase or "")
+vocab name add [as <phrase>]$:
     user.add_selection_to_vocabulary(phrase or "", "name")
-vocab noun copy [as <phrase>]$:
+vocab noun add [as <phrase>]$:
     user.add_selection_to_vocabulary(phrase or "", "noun")
 
-replacements copy as <phrase>$: user.add_selection_to_words_to_replace(phrase)
-replacements name copy as <phrase>$:
+replacements add as <phrase>$: user.add_selection_to_words_to_replace(phrase)
+replacements name add as <phrase>$:
     user.add_selection_to_words_to_replace(phrase, "name")
-replacements noun copy as <phrase>$:
+replacements noun add as <phrase>$:
     user.add_selection_to_words_to_replace(phrase, "noun")
