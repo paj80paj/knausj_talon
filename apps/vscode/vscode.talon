@@ -193,7 +193,7 @@ git stage commit [<user.text>]:
 git stage close:
     user.vscode("workbench.action.files.save")
     user.vscode("git.stage")
-    user.vscode("workbench.action.closeWindow")
+    user.vscode("workbench.action.closeActiveEditor")
 
 git commit undo: user.vscode("git.undoCommit")
 git commit amend: user.vscode("git.commitStagedAmend")
