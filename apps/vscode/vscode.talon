@@ -181,6 +181,20 @@ git commit [<user.text>]:
     user.vscode("git.commitStaged")
     sleep(100ms)
     user.insert_formatted(text or "", "CAPITALIZE_FIRST_WORD")
+git stage commit [<user.text>]: 
+    user.vscode("git.unstageAll")
+    sleep(100ms)
+    user.vscode("git.stage")
+    sleep(100ms)
+    user.vscode("git.commitStaged")
+    sleep(300ms)
+    user.insert_formatted(text or "", "CAPITALIZE_FIRST_WORD")
+
+git stage close:
+    user.vscode("workbench.action.files.save")
+    user.vscode("git.stage")
+    user.vscode("workbench.action.closeWindow")
+
 git commit undo: user.vscode("git.undoCommit")
 git commit amend: user.vscode("git.commitStagedAmend")
 git diff: user.vscode("git.openChange")
