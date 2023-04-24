@@ -73,6 +73,7 @@ wrap switch: user.vscode("editor.action.toggleWordWrap")
 zen switch: user.vscode("workbench.action.toggleZenMode")
 
 # File Commands
+file compare saved:user.vscode("workbench.files.action.compareWithSaved")
 file python: user.vscode("python.createNewFile")
 file hunt [<user.text>]:
     user.vscode("workbench.action.quickOpen")
