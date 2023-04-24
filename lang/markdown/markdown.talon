@@ -15,11 +15,11 @@ clozify that:
     insert(text)
     insert("}}} ")
     
-hash remove:
-    text = edit.selected_text()
-    edit.delete()
-    insert(user.replace_everywhere("#", ""))
-    #user.replace("")
+# hash remove:
+#     text = edit.selected_text()
+#     edit.delete()
+#     insert(user.replace_everywhere("#", ""))
+#     #user.replace("")
 
 trim start:
     edit.extend_line_start()
@@ -28,49 +28,34 @@ trim start:
 
 level <user.ordinals>:
     n = ordinals or 1
-    edit.select_line()
-    sleep(180ms)
-    text = edit.selected_text()
-    edit.delete()
-    text = user.remove_leading_punctuation(text)
+    edit.line_start()
+    sleep(200ms)
     insert("#"*n)
+    sleep(200ms)
     " "
-    user.insert_formatted(text or "", "CAPITALIZE_ALL_WORDS")
-    
-(level none)|(line clear):
-    edit.select_line()
-    sleep(180ms)
-    text = edit.selected_text()
+    sleep(200ms)
+
+line reset:
+    edit.line_start()
+    sleep(200ms)
+    edit.extend_right()
+    sleep(200ms)
     edit.delete()
-    text = user.remove_leading_punctuation(text)
-    insert(text or "")
 
 line number:
-    edit.select_line()
-    sleep(180ms)
-    text = edit.selected_text()
-    edit.delete()
-    text = user.remove_leading_punctuation(text)
+    edit.line_start()
+    sleep(200ms)
     insert("1. ")
-    insert(text or "")
-        
+
 line bullet:
-    edit.select_line()
-    sleep(180ms)
-    text = edit.selected_text()
-    edit.delete()
-    text = user.remove_leading_punctuation(text)
+    edit.line_start()
+    sleep(200ms)
     insert("- ")
-    insert(text or "")
 
 line quoted:
-    edit.select_line()
-    sleep(180ms)
-    text = edit.selected_text()
-    edit.delete()
-    text = user.remove_leading_punctuation(text)
+    edit.line_start()
+    sleep(200ms)
     insert("> ")
-    insert(text or "")
 
     # line no punk:
 #     text = edit.selected_text()
@@ -80,11 +65,6 @@ line quoted:
 #     result = user.remove_punctuation(text)
 #     insert("{text}")
 
-
-
-to do toggle:
-    user.vscode("markdown.extension.checkTaskList")
-    # key(alt-c)
 
 to do make:
     edit.select_line()
