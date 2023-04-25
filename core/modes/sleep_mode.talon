@@ -10,6 +10,11 @@ wakey wakey$ :
     mode.enable("command")
     mode.disable("sleep")
 
+# #key(keypad_enter): 
+#     mode.disable("sleep")
+#     mode.enable("command")
+#     mode.disable("dictation")
+
 # put parrt wake up noise in here.fp51P
 
 # key(§:up): 
