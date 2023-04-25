@@ -195,6 +195,10 @@ git stage close:
     user.vscode("workbench.action.files.save")
     user.vscode("git.stage")
     user.vscode("workbench.action.closeActiveEditor")
+    sleep(200ms)
+    key(cmd-0)
+    sleep(200ms)
+    key(space)
 
 git commit undo: user.vscode("git.undoCommit")
 git commit amend: user.vscode("git.commitStagedAmend")
