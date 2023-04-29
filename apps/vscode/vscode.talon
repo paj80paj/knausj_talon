@@ -182,6 +182,7 @@ git commit [<user.text>]:
     user.vscode("git.commitStaged")
     sleep(100ms)
     user.insert_formatted(text or "", "CAPITALIZE_FIRST_WORD")
+
 git stage commit [<user.text>]: 
     user.vscode("git.unstageAll")
     sleep(100ms)
@@ -192,6 +193,7 @@ git stage commit [<user.text>]:
     user.insert_formatted(text or "", "CAPITALIZE_FIRST_WORD")
 
 git stage close:
+    user.vscode("markdownlint.fixAll")
     user.vscode("workbench.action.files.save")
     user.vscode("git.stage")
     user.vscode("workbench.action.closeActiveEditor")
@@ -199,6 +201,35 @@ git stage close:
     key(cmd-0)
     sleep(200ms)
     key(space)
+
+git commit misc : 
+    user.vscode("git.commitStaged")
+    sleep(200ms)
+    insert("miscellaneous")
+
+git message accept:
+    user.vscode("git.commitMessageAccept")
+
+git north:
+    key(cmd-0)
+    sleep(100ms)
+    key(up)
+    sleep(100ms)
+    key(space)
+    sleep(100ms)
+    key(cmd-1)
+
+git south:
+    key(cmd-0)
+    sleep(100ms)
+    key(down)
+    sleep(100ms)
+    key(space)
+    sleep(100ms)
+    key(cmd-1)
+
+git line blame:
+    git commit undo: user.vscode("gitlens.toggleLineBlame")
 
 git commit undo: user.vscode("git.undoCommit")
 git commit amend: user.vscode("git.commitStagedAmend")
