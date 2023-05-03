@@ -6,7 +6,7 @@ settings():
     #enable pop click with 'control mouse' mode
     user.mouse_enable_pop_click = 0
 
-wakey wakey$ : 
+wakey wakey$: 
     mode.enable("command")
     mode.disable("sleep")
 
@@ -27,3 +27,17 @@ wakey wakey$ :
 #     # mode.enable("command")
 #     # mode.disable("sleep").net'right it's so cool'
 
+# key(§:down): 
+#      #mode.disable("sleep")
+#      #mode.disable("command")
+#      mode.enable("dictation")
+    
+
+# key(§:up): 
+#      mode.disable("dictation")
+#      mode.enable("sleep")
+# #
+
+
+
+    

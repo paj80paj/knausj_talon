@@ -1,4 +1,4 @@
-mode : command
+mode: command
 -
 
 ^silly$:
@@ -16,22 +16,13 @@ digo$ :
 ^mixed mode$:
     mode.enable("dictation")
 
-key(§:up): 
-    mode.disable("dictation")
-    mode.enable("command")
+# #key(§:down): 
+#     mode.disable("sleep")
+#     mode.disable("command")
+#     mode.enable("dictation")
 
-key(§:down): 
-    mode.disable("sleep")
-    mode.disable("command")
-    mode.enable("dictation")
+# key(§:up): 
+#     mode.disable("dictation")
+#     mode.enable("command")
 
-key(keypad_decimal:up): 
-    mode.disable("dictation")
-    mode.enable("command")
-    user.microphone_select(2)
 
-key(keypad_decimal:down): 
-    mode.disable("sleep")
-    mode.disable("command")
-    mode.enable("dictation")
-    user.microphone_select(3)
