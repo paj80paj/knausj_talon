@@ -2,6 +2,10 @@ mode: dictation
 experiment: anchor-file
 -
 
+# key(§:up): 
+#     mode.disable("dictation")
+#     mode.enable("command")
+
 ^comi$: 
     # speech.enable()
     mode.disable("dictation")
