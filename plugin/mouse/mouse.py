@@ -250,6 +250,9 @@ class Actions:
         """move the mouse cursor to the center of the currently active window"""
         ctrl.mouse_move(1023.06640625, 980.9609375)
 
+    def mouse_move_menu_talon():
+        """move the mouse cursor to the center of the currently active window"""
+        ctrl.mouse_move(3347.17578125, 5.37109375)
 
 def show_cursor_helper(show):
     """Show/hide the cursor"""
