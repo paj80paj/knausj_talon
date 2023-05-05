@@ -229,7 +229,7 @@ git south:
     key(cmd-1)
 
 git line blame:
-    git commit undo: user.vscode("gitlens.toggleLineBlame")
+    user.vscode("gitlens.toggleLineBlame")
 
 git commit undo: user.vscode("git.undoCommit")
 git commit amend: user.vscode("git.commitStagedAmend")
