@@ -35,6 +35,18 @@ level <user.ordinals>:
     " "
     sleep(200ms)
 
+level add:
+    user.vscode("markdownheadings.addHeading")
+
+level add sub:
+    user.vscode("markdownheadings.addSubHeading")
+
+level demote:
+    user.vscode("markdownheadings.demoteHeading")
+
+level promote:
+    user.vscode("markdownheadings.promoteHeading")
+
 line reset:
     edit.line_start()
     sleep(200ms)
