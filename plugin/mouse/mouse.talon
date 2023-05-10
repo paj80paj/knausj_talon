@@ -119,7 +119,7 @@ click left:
 click right:
     user.mouse_move_right_third()
     mouse_click()
-microphone hybrid:
+speech hybrid:
     user.mouse_move_menu_talon()
     mouse_click()
     sleep(100ms)
@@ -137,7 +137,7 @@ microphone hybrid:
     key(down)
     key(down)
     key(enter)
-microphone conformer:
+speech conformer:
     user.mouse_move_menu_talon()
     mouse_click()
     sleep(100ms)
