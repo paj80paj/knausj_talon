@@ -314,6 +314,18 @@ select (more | this): user.vscode("editor.action.smartSelect.expand")
 Selection all: user.vscode("actions.findWithSelection")
 Selection next: user.vscode("editor.action.addSelectionToNextFindMatch")
 
+# Cursor
+cursor back:                user.vscode("cursorUndo")
+cursor forward:             user.vscode("cursorRedo")
+cursor up:                  user.vscode("editor.action.insertCursorAbove")
+cursor down:                user.vscode("editor.action.insertCursorBelow")
+cursor lines:               user.vscode("editor.action.insertCursorAtEndOfEachLineSelected")
+cursor expand:              user.vscode("editor.action.smartSelect.expand")
+cursor shrink:              user.vscode("editor.action.smartSelect.shrink")
+cursor next:                user.vscode("editor.action.addSelectionToNextFindMatch")
+cursor last:                user.vscode("editor.action.addSelectionToPreviousFindMatch")
+cursor (breed | all):       user.vscode("editor.action.selectHighlights")
+cursor skip:                user.vscode("editor.action.moveSelectionToNextFindMatch")
 
 minimap toggle: user.vscode("editor.action.toggleMinimap")
 maximize: user.vscode("workbench.action.minimizeOtherEditors")
