@@ -16,9 +16,9 @@ experiment: anchor-file
 ^press <user.keys>$: key(keys)
 
 # Everything here should call `user.dictation_insert()` instead of `insert()`, to correctly auto-capitalize/auto-space.
-<user.raw_prose>: user.dictation_insert(raw_prose)
+#<user.raw_prose>: user.dictation_insert(raw_prose)
 cap: user.dictation_format_cap()
-# Hyphenated variants are git for Dragon.
+# Hyphenated variants are git for Dragon.f
 (no cap | no-caps): user.dictation_format_no_cap()
 (no space | no-space): user.dictation_format_no_space()
 ^cap that$: user.dictation_reformat_cap()
@@ -26,54 +26,54 @@ cap: user.dictation_format_cap()
 ^(no space | no-space) that$: user.dictation_reformat_no_space()
 
 # Navigation
-go up <number_small> (line | lines):
+^go up <number_small> (line | lines):
     edit.up()
     repeat(number_small - 1)
-go down <number_small> (line | lines):
+^go down <number_small> (line | lines):
     edit.down()
     repeat(number_small - 1)
-go left <number_small> (word | words):
+^go left <number_small> (word | words):
     edit.word_left()
     repeat(number_small - 1)
-go right <number_small> (word | words):
+^go right <number_small> (word | words):
     edit.word_right()
     repeat(number_small - 1)
-go line start: edit.line_start()
-go line end: edit.line_end()
+^go line start: edit.line_start()
+^go line end: edit.line_end()
 
 # Selection
-select left <number_small> (word | words):
+^select left <number_small> (word | words):
     edit.extend_word_left()
     repeat(number_small - 1)
-select right <number_small> (word | words):
+^select right <number_small> (word | words):
     edit.extend_word_right()
     repeat(number_small - 1)
-select left <number_small> (character | characters):
+^select left <number_small> (character | characters):
     edit.extend_left()
     repeat(number_small - 1)
-select right <number_small> (character | characters):
+^select right <number_small> (character | characters):
     edit.extend_right()
     repeat(number_small - 1)
-clear left <number_small> (word | words):
+^clear left <number_small> (word | words):
     edit.extend_word_left()
     repeat(number_small - 1)
     edit.delete()
-clear right <number_small> (word | words):
+^clear right <number_small> (word | words):
     edit.extend_word_right()
     repeat(number_small - 1)
     edit.delete()
-clear left <number_small> (character | characters):
+^clear left <number_small> (character | characters):
     edit.extend_left()
     repeat(number_small - 1)
     edit.delete()
-clear right <number_small> (character | characters):
+^clear right <number_small> (character | characters):
     edit.extend_right()
     repeat(number_small - 1)
     edit.delete()
 
 # Formatting
 formatted <user.format_text>: user.dictation_insert_raw(format_text)
-^format selection <user.formatters>$: user.formatters_reformat_selection(formatters)
+^format selection <user.formatters>$: user.formatters_reformat_selection(formatters)1
 
 # Corrections
 scratch that: user.clear_last_phrase()
@@ -87,5 +87,12 @@ spell that <user.formatters> <user.letters>:
 # Escape, type things that would otherwise be commands
 ^escape <user.text>$: user.dictation_insert(user.text)
 
-clapper : key(enter)
-okay : key(enter)
+^clapper$ : 
+    key(enter)
+    edit.line_start()
+^new line$ : 
+    key(enter)
+    sleep(100ms)
+    edit.line_start()
+
+#okay : key(enter)
