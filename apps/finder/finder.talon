@@ -46,11 +46,14 @@ folder open:
 
 copify <user.system_path>: 
     key(cmd-c)
+    #key(cmd-shift-g)
+    sleep(200ms)
     user.menu_select('Go|Go to Folder…')
-    sleep(200ms)
+    sleep(400ms)
     insert(system_path)
-    sleep(200ms)
+    sleep(400ms)
     key(enter)
+    sleep(400ms)
     key(cmd-v)
 
 show hidden:
