@@ -136,6 +136,7 @@ speech hybrid:
     key(down)
     key(down)
     key(down)
+    key(down)
     key(enter)
 speech conformer:
     user.mouse_move_menu_talon()
@@ -146,6 +147,8 @@ speech conformer:
     key(down)
     sleep(100ms)
     key(right)
+    key(down)
+    key(down)
     key(down)
     key(down)
     key(down)
