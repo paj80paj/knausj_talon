@@ -6,10 +6,7 @@ ellipses: "..."
 (comma and | spamma): ", "
 (comma | spamma): ", "
 arrow: "->"
-long»n<≥to arrow: "-->"#kind of a hassle right you're planning this thing out man you have to make extra accountability for this it takes upia lot of rules around it and it can be pain but when you use this limitation and you really work with it and massage it often you can get something better than you could
-Kind Regards, 
-and::it::wasaccessibility90|#w
-40o1Bottom It Puts on Subtitles but Now You Go on Social Media and You Can't See a Video Without Subtitles on is So Much Better Because Now You Can Listen to Your
+long arrow: "-->"
 dub arrow: "=>"
 #new line: "\\n"
 carriage return: "\\r"
