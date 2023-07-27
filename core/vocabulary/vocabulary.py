@@ -237,6 +237,16 @@ class Actions:
             False,
         )
 
+    # def add_selection_to_contacts(phrase: Union[Phrase, str] = "", type: str = ""):
+    #     """Permanently adds the currently selected text to my contacts """
+    #     _add_selection_to_csv(
+    #         phrase,
+    #         type,
+    #         "my_contacts.csv",
+    #         vocabulary,
+    #         False,    
+    #     )
+
     def add_selection_to_words_to_replace(phrase: Phrase, type: str = ""):
         """Permanently adds the currently selected text as replacement for the provided
         original form and adds variants based on the type ("noun" or "name").

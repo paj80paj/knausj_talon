@@ -180,7 +180,7 @@ git checkout [<user.text>]:
     insert(text or "")
 git commit [<user.text>]:
     user.vscode("git.commitStaged")
-    sleep(100ms)
+    sleep(300ms)
     user.insert_formatted(text or "", "CAPITALIZE_FIRST_WORD")
 
 git stage commit [<user.text>]: 
@@ -190,6 +190,13 @@ git stage commit [<user.text>]:
     sleep(100ms)
     user.vscode("git.commitStaged")
     sleep(300ms)
+    user.insert_formatted(text or "", "CAPITALIZE_FIRST_WORD")
+
+git commit all [<user.text>]: 
+    user.vscode("git.stageAll")
+    sleep(300ms)
+    user.vscode("git.commitStaged")
+    sleep(400ms)
     user.insert_formatted(text or "", "CAPITALIZE_FIRST_WORD")
 
 git stage close:
@@ -204,7 +211,7 @@ git stage close:
 
 git commit misc : 
     user.vscode("git.commitStaged")
-    sleep(200ms)
+    sleep(400ms)
     insert("miscellaneous")
 
 git message accept:
@@ -366,6 +373,10 @@ focus <user.number_string> : key("cmd-number_string}")
 
 dex toggle:
     user.vscode("cursorless.toggleDecorations")
+    user.vscode("lntoggle.toggle")
+
+line number toggle:     
+    user.vscode("lntoggle.toggle")
 
 line break <user.cursorless_target>:
     user.cursorless_command("setSelectionBefore", cursorless_target)

@@ -10,21 +10,26 @@ wakey wakey$:
     mode.enable("command")
     mode.disable("sleep")
 
+#key(keypad_0:up):
+    #key(escape)
+#    mode.enable("command")
+    #mode.disable("sleep")
+    
 #key(keypad_enter:down): 
      #mode.disable("sleep")
 #     mode.enable("dictation")
 
-# put parrt wake up noise in here.fp51P
-
+# put parrt wake up noise in here.c
+# #
 # key(§:up): 
-#     print("up")
-#     # mode.enable("command")
-#     # mode.disable("sleep")
+# #     print("up")
+#     mode.enable("command")
+#     mode.disable("sleep")
 
 # key(§:down): 
 #     print("+xx")
-#     # mode.enable("command")
-#     # mode.disable("sleep").net'right it's so cool'
+#     mode.enable("dictation")
+#     mode.disable("sleep")
 
 # key(§:down): 
 #      #mode.disable("sleep")
@@ -36,7 +41,6 @@ wakey wakey$:
 #      mode.disable("dictation")
 #      mode.enable("sleep")
 # #
-
 
 
     

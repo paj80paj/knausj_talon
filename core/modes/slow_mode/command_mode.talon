@@ -7,7 +7,7 @@ mode: command
     mode.enable("sleep")
     key(ctrl-alt-cmd-s)
 
-digo$ : 
+digo$: 
     mode.disable("command")
     mode.enable("dictation")
 

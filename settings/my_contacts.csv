@@ -35,8 +35,13 @@ Gavan Nolan, Gavan
 Grzegorz Chlodzinski, Gregosh
 Drzazgowski Wojciech, Woi check
 Giorgio Baldassarini, Giorgio
+Sonia Karuthasami, Sonya
+Arunram Atmacharan, Arunram
+
 
 prj_eagle, project eagle
+prj_eagle, project reg chat
+prj_loan_bot, project loan bot
 prj_chat, project chat
 prj_comps, project comps
 prj_workflow, project workflow
@@ -46,13 +51,12 @@ prj_ML, project ML
 prj_holidays,Project holidays
 prj_misc,Project miscellaneous
 
-
 _rust_beta, rust beta
 _meet_up, meet up
+_team_weekly
+_sales_weekly
 
-talon, talon
-
-Bilateral Meeting, Bilateral
+Bilateral, Bilateral
 Group Meeting, Group
 Literature Note, Literature 
 New Project, Project
