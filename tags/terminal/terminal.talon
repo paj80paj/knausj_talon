@@ -16,14 +16,17 @@ rerun search: user.terminal_rerun_search("")
 kill all: user.terminal_kill_all()
 tree git: "tree .git"
 
-git hash object: 
-    "git hash-object --stdin -w"
 git cat file: 
     #view (Word concatenate) the binaries in the git repo
     "git cat-file"
+
+git hash object: 
+    "git hash-object --stdin -w"
+
 git update index: 
     #add the blob to the git index /cache
     "git update-index add cacheinfo 100644"
+
 git write tree:
      #Write a tree object from the current index.
      "git write-tree"
@@ -32,6 +35,8 @@ git commit tree:
     #Create a commit object with the tree.
     "git commit-tree"
 
+tree git: 
+    "tree .git"
 
 copy paste:
     edit.copy()
