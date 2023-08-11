@@ -141,10 +141,14 @@ bot
 CSV, C S V
 foam
 LLM, L L M
-""
 's,s
 DAG,D A G
 DAGs,D A Gs
-mkdir
-mkdirs
-stdin
+mkdir, make directory
+stdin, standard in
+.git, dot git
+refs
+Kun
+curam
+curams
+Parsing
