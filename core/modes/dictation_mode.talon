@@ -73,7 +73,7 @@ cap: user.dictation_format_cap()
 
 # Formatting
 formatted <user.format_text>: user.dictation_insert_raw(format_text)
-^format selection <user.formatters>$: user.formatters_reformat_selection(formatters)1
+^format selection <user.formatters>$: user.formatters_reformat_selection(formatters)
 
 # Corrections
 scratch that: user.clear_last_phrase()
