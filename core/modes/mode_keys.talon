@@ -2,37 +2,20 @@ mode: all
 
 -
 
-# key(keypad_0): 
-#     mode.disable("command")
-#     mode.disable("dictation")
-#     mode.enable("sleep")
-
 key(§:down): 
+    #Hold the power graph key down to  Do dictation
     mode.save()
     mode.disable("sleep")
     mode.disable("command")
     mode.enable("dictation")
 
 key(§:up): 
-    #mode.disable("dictation")
-    #mode.enable("command")
     mode.restore()
 
-# key(keypad_decimal:up): 
-#     mode.disable("dictation")
-#     mode.enable("command")
-#     user.microphone_select(2)
-
-# key(keypad_decimal:down): 
-#     mode.disable("sleep")
-#     mode.disable("command")
-#     mode.enable("dictation")
-#     user.microphone_select(3) 
-
-key(keypad_decimal:down):
+key(keypad_decimal):
     # turn on siri dictation
     mode.disable("command")
-    mode.enable("user.silly")
+    #mode.enable("user.silly")
     mode.enable("sleep")
     key(ctrl-alt-cmd-s)
 
@@ -42,17 +25,15 @@ key(keypad_enter):
     mode.enable("command")
 
 key(keypad_0): 
-    #  take talon into sleep mode
+    #  take talon into sleep mode 
     mode.disable("command")
     mode.enable("sleep")
 
-# key(keypad_decimal:up): 
-#     mode.disable("dictation")
-#     mode.enable("command")
-#     user.microphone_select(2)
+key(keypad_1): 
+     #Press keypad 1 to take a screenshot of the entire screen.
+    user.screenshot()
 
-# key(keypad_decimal:down): 
-#     mode.disable("sleep")
-#     mode.disable("command")
-#     mode.enable("dictation")
-#     user.microphone_select(3)
+key(keypad_2): 
+     #Press keypad to screenshot the window.
+    user.screenshot_window
+

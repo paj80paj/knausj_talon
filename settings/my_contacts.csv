@@ -16,7 +16,7 @@ Jitendra Rudravaram, Jitendra
 Marvin Nicholson, Marvin
 Edward Down,Ed Down
 Alec Gosse, Alec
-Len Delicaet, Len
+Len Delicaet, Len Delicate
 Jessie Judd, Jessie
 Ashna Rahman, Ashna
 Pierre Khemdoudi, Pier
@@ -37,11 +37,19 @@ Drzazgowski Wojciech, Woi check
 Giorgio Baldassarini, Giorgio
 Sonia Karuthasami, Sonya
 Arunram Atmacharan, Arunram
-
+Arunram Atmacharan, Arun
+Vasily Roshchuk, Vasily
+Akshaykumar Chothani, Akshay
+Arsene Lui, Arsene
+Nikita Iserson, Nikita
+Kun Liu, Kun
 
 prj_eagle, project eagle
-prj_eagle, project reg chat
+prj_FFP,  Project F F P
 prj_loan_bot, project loan bot
+prj_legal_gpt,  Project Legal gpt
+prj_reg_gpt,  Project reg gpt
+
 prj_chat, project chat
 prj_comps, project comps
 prj_workflow, project workflow
@@ -62,3 +70,4 @@ Literature Note, Literature
 New Project, Project
 Zettel, Zettel
 basic, basic
+journal, journal 

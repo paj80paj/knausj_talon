@@ -33,6 +33,7 @@ bar switch: user.vscode("workbench.action.toggleSidebarVisibility")
 bar to do: user.vscode("todo-tree.showTreeView")
 bar focus: key(cmd-0)
 bar unfocus: key(cmd-1)
+bar chat: user.vscode("workbench.action.chat.openInSidebar")
 
 activity (toggle|switch): user.vscode("workbench.action.toggleActivityBarVisibility")
                                     
@@ -192,12 +193,16 @@ git stage commit [<user.text>]:
     sleep(300ms)
     user.insert_formatted(text or "", "CAPITALIZE_FIRST_WORD")
 
-git commit all [<user.text>]: 
-    user.vscode("git.stageAll")
+git commit staged: 
     sleep(300ms)
     user.vscode("git.commitStaged")
     sleep(400ms)
-    user.insert_formatted(text or "", "CAPITALIZE_FIRST_WORD")
+    "All files"
+    sleep(200ms)
+    key(enter)
+    sleep(200ms)
+    user.vscode("git.commitMessageAccept")
+
 
 git stage close:
     user.vscode("markdownlint.fixAll")
