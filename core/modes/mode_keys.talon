@@ -22,11 +22,13 @@ key(keypad_decimal):
 key(keypad_enter): 
     # Go into command mode
     mode.disable("sleep")
+    mode.disable("dictation")
     mode.enable("command")
 
 key(keypad_0): 
     #  take talon into sleep mode 
     mode.disable("command")
+    mode.disable("dictation")
     mode.enable("sleep")
 
 key(keypad_1): 
@@ -35,5 +37,17 @@ key(keypad_1):
 
 key(keypad_2): 
      #Press keypad to screenshot the window.
-    user.screenshot_window
+    user.screenshot_window()
 
+key(keypad_4):
+    key(cmd-space)
+    sleep(400ms)
+    "sound input"
+    key(enter)
+
+key(keypad_5):
+    key(cmd-space)
+    sleep(400ms)
+    insert("sound output")
+    sleep(400ms)
+    key(enter)
