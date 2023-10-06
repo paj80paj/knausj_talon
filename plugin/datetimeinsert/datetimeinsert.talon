@@ -12,3 +12,18 @@ IJ start:
 IJ end:
     insert('##### END ')
     insert(user.time_format("%H:%M %y-%m-%d"))
+
+flow start:
+    #ctrl ⌥ ⌘ + f --> Start / Stop the Flow timer
+    key(ctrl-alt-cmd-f)
+    
+flow show:
+    #Show / Hide app window--> ctrl ⌥ ⌘ + h
+    key(ctrl-alt-cmd-h)
+
+flow reset:
+    # Reset pomodoro counter-->    ctrl ⌥ ⌘ + r
+    key(ctrl-alt-cmd-r)
+
+Read aloud:
+    key(ctrl-alt-cmd-j)

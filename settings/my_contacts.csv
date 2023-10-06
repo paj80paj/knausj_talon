@@ -45,20 +45,16 @@ Nikita Iserson, Nikita
 Kun Liu, Kun
 Frank Tarsillo, Frank
 
-prj_eagle, project eagle
-prj_FFP,  Project F F P
-prj_loan_bot, project loan bot
-prj_legal_gpt,  Project Legal gpt
-prj_reg_gpt,  Project reg gpt
-
-prj_chat, project chat
-prj_comps, project comps
-prj_workflow, project workflow
-prj_quantlake, project quantlake
-prj_ML, project machine learning
-prj_ML, project ML
-prj_holidays,Project holidays
-prj_misc,Project miscellaneous
+prj_liquidity_93, project liquidity
+prj_loan_bot_94, project loan bot
+prj_loan_comps_95, loan comparables
+prj_FFP_96,  Project F F P
+prj_eagle_97, project eagle
+prj_workflow_98, project work flow
+prj_quantlake_99, project quant lake
+prj_reg_gpt_910,  Project reg gpt
+prj_legal_gpt_911,  Project Legal gpt
+prj_ML_912, project ML knowledge
 
 _rust_beta, rust beta
 _meet_up, meet up
@@ -71,4 +67,6 @@ Literature Note, Literature
 New Project, Project
 Zettel, Zettel
 basic, basic
-journal, journal 
+journal, journal
+
+prompt_engineering
