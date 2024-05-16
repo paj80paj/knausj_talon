@@ -52,6 +52,8 @@ settings():
     # per-application basis.
     # user.context_sensitive_dictation = 1
 
+    user.cursorless_settings_directory = "MyTalonConfig/cursorless-settings"
+
 # Uncomment this to enable the curse yes/curse no commands (show hide mouse cursor). See issue #688.
 # tag(): user.mouse_cursor_commands_enable
 # tag(): user.cursorless_experimental_snippets
