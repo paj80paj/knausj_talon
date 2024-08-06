@@ -35,6 +35,10 @@ bar focus: key(cmd-0)
 bar unfocus: key(cmd-1)
 bar chat: user.vscode("workbench.action.chat.openInSidebar")
 
+cody edit: user.vscode("cody.command.edit-code") 
+cody add: user.vscode("cody.mention.file")
+cody chat: user.vscode("cody.chat.newEditorPanel")
+
 activity (toggle|switch): user.vscode("workbench.action.toggleActivityBarVisibility")
                                     
 # Symbol search
