@@ -11,6 +11,8 @@ mod.apps.vscode = """
 os: mac
 and app.bundle: com.microsoft.VSCode
 os: mac
+and app.app: cursor
+os: mac
 and app.bundle: com.microsoft.VSCodeInsiders
 os: mac
 and app.bundle: com.visualstudio.code.oss
