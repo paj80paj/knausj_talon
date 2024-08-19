@@ -440,3 +440,10 @@ search regex:
 search apply:
     user.vscode("searchEditorApplyChanges.apply")
 
+task commmit all:
+    user.run_rpc_command("workbench.action.tasks.runTask","Git commit all")
+
+tab claude:
+    user.vscode("claude-dev.openInNewTab")
+tab terminal:
+    user.vscode("workbench.action.createTerminalEditor")

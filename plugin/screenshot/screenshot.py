@@ -7,11 +7,7 @@ from talon.canvas import Canvas
 
 mod = Module()
 
-default_folder = ""
-if app.platform == "windows":
-    default_folder = os.path.expanduser(os.path.join("~", r"OneDrive\\Pictures"))
-if not os.path.isdir(default_folder):
-    default_folder = os.path.join("~", "Pictures")
+default_folder = "/Users/paulj/Library/Mobile Documents/com~apple~CloudDocs/Downloads/Screenshots"
 
 screenshot_folder = mod.setting(
     "screenshot_folder",
@@ -62,7 +58,9 @@ def screenshot_rect(rect: ui.Rect, title: str = ""):
     flash_rect(rect)
     img = screen.capture_rect(rect)
     path = get_screenshot_path(title)
+    print(f"Debug: Attempting to save screenshot to {path}")
     img.write_file(path)
+    print(f"Debug: Screenshot saved successfully to {path}")
 
 
 def clipboard_rect(rect: ui.Rect):
@@ -77,6 +75,7 @@ def get_screenshot_path(title: str = ""):
     date = datetime.now().strftime("%Y-%m-%dT%H-%M-%S")
     filename = f"Screenshot {date}{title}.png"
     folder_path = screenshot_folder.get()
+    print(f"Debug: Screenshot folder path: {folder_path}")
     path = os.path.expanduser(os.path.join(folder_path, filename))
     return os.path.normpath(path)
 
