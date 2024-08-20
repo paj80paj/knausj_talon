@@ -1,13 +1,16 @@
 mode: user.whisper_dictation
 -
 
-key(alt-;):
+key(cmd-shift-f15):
     #The whisper code standalone will call back this shortcut when it's finished
     print("whisper dictation_off")
     mode.restore()
 
-key(§): 
-    key(ctrl-alt-shift-r)
+key(§:up): 
+
+    key(cmd-shift-f16)
+
+key(§:down): skip()
 
 key(keypad_decimal):
     # go to sleep mode

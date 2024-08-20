@@ -3,7 +3,7 @@ not mode: user.whisper_dictation
 -
 #key(alt-/:down)
 
-key(§): 
+key(§:up): 
     #Hold the paragraph key down to do dictation
     mode.save()
     print("§  -> dictation")
@@ -11,7 +11,10 @@ key(§):
     mode.disable("command")
     mode.disable("dictation")
     mode.enable("user.whisper_dictation")
-    key(ctrl-alt-shift-r)
+    key(cmd-shift-f16)
+
+
+key(§:down): skip()
 
 key(alt-z):
 
