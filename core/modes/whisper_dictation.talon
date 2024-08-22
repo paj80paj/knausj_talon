@@ -6,11 +6,10 @@ key(cmd-shift-f15):
     print("whisper dictation_off")
     mode.restore()
 
-key(§:up): 
+key(§:up): key(cmd-shift-f16) #release para to trigger the shortcut to stop whisper dictation
 
-    key(cmd-shift-f16)
 
-key(§:down): skip()
+key(§:down): skip() #absorb the paragraph key
 
 key(keypad_decimal):
     # go to sleep mode

@@ -11,7 +11,7 @@ key(§:up):
     mode.disable("command")
     mode.disable("dictation")
     mode.enable("user.whisper_dictation")
-    key(cmd-shift-f16)
+    key(cmd-shift-f16) #release para to trigger the shortcut to stop whisper dictation
 
 
 key(§:down): skip()
