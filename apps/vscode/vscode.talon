@@ -447,3 +447,9 @@ tab claude:
     user.vscode("claude-dev.openInNewTab")
 tab terminal:
     user.vscode("workbench.action.createTerminalEditor")
+
+Bookmark toggle:
+    user.vscode("bookmarks.toggle")
+
+Bookmark show:
+    user.vscode("bookmarksExplorer.focus")
