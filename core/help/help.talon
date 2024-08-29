@@ -5,6 +5,8 @@ help punctuation: user.help_list("user.punctuation")
 help modifier: user.help_list("user.modifier_key")
 help special keys: user.help_list("user.special_key")
 help function keys: user.help_list("user.function_key")
+help projects: user.help_list("user.project_names")
+help prompts: user.help_list("user.staticPrompt")
 help arrows: user.help_list("user.arrow_key")
 (help formatters | help format | format help):
     user.help_formatters(user.get_formatters_words())
