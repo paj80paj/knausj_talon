@@ -148,11 +148,7 @@ go recent [<user.text>]:
     sleep(250ms)
 go edit: user.vscode("workbench.action.navigateToLastEditLocation")
 
-# Bookmarks. Requires Bookmarks plugin
-go marks: user.vscode("workbench.view.extension.bookmarks")
-toggle mark: user.vscode("bookmarks.toggle")
-go next mark: user.vscode("bookmarks.jumpToNext")
-go last mark: user.vscode("bookmarks.jumpToPrevious")
+
 
 close other tabs: user.vscode("workbench.action.closeOtherEditors")
 close all tabs: user.vscode("workbench.action.closeAllEditors")
@@ -448,8 +444,7 @@ tab claude:
 tab terminal:
     user.vscode("workbench.action.createTerminalEditor")
 
-Bookmark toggle:
-    user.vscode("bookmarks.toggle")
-
-Bookmark show:
-    user.vscode("bookmarksExplorer.focus")
+Bookmark show: user.vscode("bookmarksExplorer.focus")
+Bookmark toggle: user.vscode("bookmarks.toggle")
+bookmark next : user.vscode("bookmarks.jumpToNext")
+bookmark previous: user.vscode("bookmarks.jumpToPrevious")
