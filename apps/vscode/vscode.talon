@@ -141,13 +141,20 @@ go forward: user.vscode("workbench.action.navigateForward")
 go implementation: user.vscode("editor.action.goToImplementation")
 go type: user.vscode("editor.action.goToTypeDefinition")
 go usage: user.vscode("references-view.find")
+
 go recent [<user.text>]:
     user.vscode("workbench.action.openRecent")
     sleep(50ms)
     insert(text or "")
     sleep(250ms)
-go edit: user.vscode("workbench.action.navigateToLastEditLocation")
 
+go recent [<user.text>]:
+    user.vscode("workbench.action.openRecent")
+    sleep(50ms)
+    insert(text or "")
+    sleep(250ms)
+
+go edit: user.vscode("workbench.action.navigateToLastEditLocation")
 
 
 close other tabs: user.vscode("workbench.action.closeOtherEditors")
