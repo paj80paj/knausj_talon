@@ -148,12 +148,6 @@ go recent [<user.text>]:
     insert(text or "")
     sleep(250ms)
 
-go recent [<user.text>]:
-    user.vscode("workbench.action.openRecent")
-    sleep(50ms)
-    insert(text or "")
-    sleep(250ms)
-
 go edit: user.vscode("workbench.action.navigateToLastEditLocation")
 
 
@@ -322,7 +316,6 @@ terminal scroll up: user.vscode("workbench.action.terminal.scrollUp")
 terminal scroll down: user.vscode("workbench.action.terminal.scrollDown")
 terminal <number_small>: user.vscode_terminal(number_small)
 
-#TODO: should this be added to linecommands?
 copy line down: user.vscode("editor.action.copyLinesDownAction")
 copy line up: user.vscode("editor.action.copyLinesUpAction")
 

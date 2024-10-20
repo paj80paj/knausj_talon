@@ -35,8 +35,6 @@ git commit tree:
     #Create a commit object with the tree.
     "git commit-tree"
 
-tree git: 
-    "tree .git"
 
 copy paste:
     edit.copy()
