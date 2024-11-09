@@ -6,7 +6,7 @@ Health and Sickness: A/1-1-health-and-sickness
 Fitness: A/1-2-fitness
 Nutrition: A/1-3-nutrition
 Sleep: A/1-4-sleep
-Meditation, Spirituality, Truth: A/1-5-meditation-spirituality-truth
+Meditation Spirituality Truth: A/1-5-meditation-spirituality-truth
 Entertainment: A/2-entertainment
 Entertainment Miscellaneous: A/2-0-entertainment-miscellaneous
 Travel: A/2-1-travel
@@ -32,7 +32,7 @@ Caravan: A/4-3-caravan
 Car: A/4-4-car
 Small Assets: A/4-5-small-assets
 Friends and Family: A/5-friends-and-family
-F+F Miscellaneous: A/5-0-f-f-miscellaneous
+F and F Miscellaneous: A/5-0-f-f-miscellaneous
 Maria: A/5-1-maria
 Felix: A/5-2-felix
 Mum: A/5-3-mum
@@ -42,7 +42,7 @@ Extended family: A/5-6-extended-family
 Machine Learning and Technology: A/6-machine-learning-and-technology
 MLT: A/6-0-mlt-miscellaneous
 Python: A/6-1-python
-Machine learning & MLOp: A/6-2-machine-learning-mlop
+Machine Learning and MLOp: A/6-2-machine-learning-mlop
 Mathematics: A/6-3-mathematics
 Mac: A/6-4-mac
 Workflow Knowledge Management: A/7-workflow-knowledge-management
@@ -52,8 +52,8 @@ Dendron and Foam: A/7-3-dendron-and-foam
 Anki and Spaced Repetition: A/7-4-anki-and-spaced-repetition
 Business Ideas: A/8-business-ideas
 Work: P/9-work
-Work Admin & Misc: P/9-0-work-admin-misc
-Work Career - Relationships & strategy: P/9-1-work-career-relationships-strategy
+Work Admin Misc: P/9-0-work-admin-misc
+Work Career Relationships strategy: P/9-1-work-career-relationships-strategy
 Work Team Management: P/9-2-work-team-management
 Liquidity: P/9-3-liquidity
 loan bot: P/9-4-loan-bot

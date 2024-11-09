@@ -1,6 +1,6 @@
 tag: browser
 -
-tab new window: user.menu_select('Window|Move Tab to New Window')
+# tab new window: user.menu_select('Window|Move P/9-15-wealthaiP/9-15-wealthai10¡Tab to New Window')
 
 address bar | go address | go url: browser.focus_address()
 address copy | url copy | copy address | copy url:
