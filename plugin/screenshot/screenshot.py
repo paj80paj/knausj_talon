@@ -7,7 +7,7 @@ from talon.canvas import Canvas
 
 mod = Module()
 
-default_folder = "/Users/paulj/Library/Mobile Documents/com~apple~CloudDocs/Downloads/Screenshots"
+default_folder = "/Users/paulj/Downloads/Screenshots"
 
 screenshot_folder = mod.setting(
     "screenshot_folder",

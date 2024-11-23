@@ -4,9 +4,8 @@ not mode: user.whisper_dictation
 #key(alt-/:down)
 
 key(§:up): 
-    #Hold the paragraph key down to do dictation
+    #press the paragraph key down to do dictation
     mode.save()
-    print("§  -> dictation")
     mode.enable("sleep")
     mode.disable("command")
     mode.disable("dictation")
@@ -15,36 +14,26 @@ key(§:up):
     key(cmd-shift-f16) 
     
 
-
 key(§:down): skip()
 
 key(alt-z):
 
-    print("ctrl-`  -> sleep")
-    mode.disable("sleep")
     mode.enable("command")
+    mode.disable("sleep")
     mode.disable("dictation")
 
 key(ctrl-`):
-    print("ctrl-`  -> sleep")
+
     mode.enable("sleep")
     mode.disable("command")
     mode.disable("dictation")
     mode.disable("user.whisper_dictation")
 
 key(keypad_decimal):
-    # go to sleep mode
-    mode.enable("sleep")
-    mode.disable("command")
-    mode.disable("dictation")
-    mode.disable("user.whisper_dictation")
-    
+    #Unused
 
 key(keypad_enter): 
-    # Go into command mode
-    mode.disable("sleep")
-    mode.disable("dictation")
-    mode.enable("command")
+    # Unused
 
 key(keypad_0): 
     #  take talon into sleep mode 

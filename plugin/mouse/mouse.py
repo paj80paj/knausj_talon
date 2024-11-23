@@ -1,8 +1,11 @@
 import os
 
-from talon import Module, actions, app, clip, cron, ctrl, imgui, noise, ui
+from talon import Module, actions, app, clip, cron, ctrl, imgui, noise, ui, settings, log
 from talon_plugins import eye_zoom_mouse
 from talon import tracking
+
+# Print a clear separator line on module load
+log.info("="*80)
 
 key = actions.key
 self = actions.self
@@ -33,63 +36,64 @@ default_cursor = {
     "IBeam": "",
 }
 
-# todo figure out why notepad++ still shows the cursor sometimes.
 hidden_cursor = os.path.join(
     os.path.dirname(os.path.realpath(__file__)), r"Resources\HiddenCursor.cur"
 )
 
 mod = Module()
-mod.list(
-    "mouse_button", desc="List of mouse button words to mouse_click index parameter"
-)
-mod.tag(
-    "mouse_cursor_commands_enable", desc="Tag enables hide/show mouse cursor commands"
-)
-setting_mouse_enable_pop_click = mod.setting(
+mod.tag("mouse_cursor_commands_enable", desc="Tag enables hide/show mouse cursor commands")
+
+# Register settings with the correct namespace
+settings_mod = Module("user")
+settings_mod.setting(
     "mouse_enable_pop_click",
     type=int,
     default=0,
-    desc="Enable pop to click when control mouse is enabled.",
+    desc="Enable pop click with 'control mouse' mode",
 )
-setting_mouse_enable_pop_stops_scroll = mod.setting(
+settings_mod.setting(
+    "mouse_continuous_scroll_amount",
+    type=int,
+    default=80,
+    desc="The default amount used when scrolling continuously",
+)
+settings_mod.setting(
     "mouse_enable_pop_stops_scroll",
     type=int,
-    default=0,
-    desc="When enabled, pop stops continuous scroll modes (wheel upper/downer/gaze)",
+    default=1,
+    desc="Stop continuous scroll/gaze scroll with a pop",
 )
-setting_mouse_wake_hides_cursor = mod.setting(
-    "mouse_wake_hides_cursor",
-    type=int,
-    default=0,
-    desc="When enabled, mouse wake will hide the cursor. mouse_wake enables zoom mouse.",
-)
-setting_mouse_hide_mouse_gui = mod.setting(
+settings_mod.setting(
     "mouse_hide_mouse_gui",
     type=int,
     default=0,
-    desc="When enabled, the 'Scroll Mouse' GUI will not be shown.",
+    desc="When enabled, the 'Scroll Mouse' GUI will not be shown",
 )
-setting_mouse_continuous_scroll_amount = mod.setting(
-    "mouse_continuous_scroll_amount",
+settings_mod.setting(
+    "mouse_wake_hides_cursor",
     type=int,
-    default=2,
-    desc="The default amount used when scrolling continuously",
+    default=0,
+    desc="Hide cursor when mouse_wake is called to enable zoom mouse",
 )
-setting_mouse_wheel_down_amount = mod.setting(
+settings_mod.setting(
     "mouse_wheel_down_amount",
     type=int,
     default=120,
-    desc="The amount to scroll up/down (equivalent to mouse wheel on Windows by default)",
+    desc="The amount to scroll up/down",
 )
-setting_mouse_wheel_horizontal_amount = mod.setting(
+settings_mod.setting(
     "mouse_wheel_horizontal_amount",
     type=int,
     default=40,
     desc="The amount to scroll left/right",
 )
 
-continuous_scoll_mode = ""
+mod.list(
+    "mouse_button",
+    desc="List of mouse button words to mouse_click index parameter",
+)
 
+continuous_scoll_mode = ""
 
 @imgui.open(x=700, y=0)
 def gui_wheel(gui: imgui.GUI):
